@@ -52,9 +52,105 @@ let arr = ['a' , 'b', 'c']
 
 // console.log(arr, deleted);
 
-//INDEXOF
+// INDEXOF
 
 // arr.indexOf('b')
 
 // if(arr.indexOf('b') == -1) return
 
+// INCLUDES
+
+let niz = [1, 2, 3, 4, 20, 12, 200, 13, 405]
+
+// console.log(niz.includes(1));
+
+// REVERSE
+
+// niz.reverse()
+
+// console.log(niz);
+
+// function imeFunkcije(param1, param2) {
+//     return param1 + param2
+// }
+
+// const imeFunkcije = (param1, param2 = param1) => {
+//     return param1 + param2
+// }
+
+// imeFunkcije()
+
+// FILTER
+
+// let noviNiz = niz.filter(el => el % 2 == 0)
+
+// console.log(noviNiz);
+
+// FIND 
+
+// niz.find(el => el >= 20)
+
+// FINDINDEX
+
+// niz.findIndex(el => el === 3)
+
+// MAP
+
+// let nekiNiz = niz.map(el => el * 2)
+
+// console.log(nekiNiz, niz)
+
+// FOREACH
+
+// niz.forEach((element, index) => {
+//     if(element == 2)
+//         return
+// })
+
+// for(){
+//     if(niz[i] == 2)
+//         break
+// }
+
+// EVERY
+
+// niz.every(el => el > 2)
+
+// SOME
+
+// niz.some(el => el > 2)
+
+// SORT
+
+// let nizImena = ['Marko', 'Aco', 'Ana', 'Ivan', 'Jana', 'Jovana']
+
+// nizImena.sort((a, b) => a.length - b.length)
+
+// console.log(nizImena)
+
+// niz.reduce((rezultat, trenutni) => {
+//     rezultat + trenutni
+// }, 0)
+
+
+// let sati = new Date().getHours()
+// let minuti = new Date().getMinutes()
+// let sekunde = new Date().getSeconds()
+
+// let datum = new Date()
+
+// console.log(datum)
+
+// console.log(`${sati}:${minuti}:${sekunde}`);
+
+// let rez = 0
+
+// forEach(element => {
+//     rez += element
+// })
+
+// console.log(rez)
+
+// setTimeout(() => {
+    // console.log()
+// }, 1000)
