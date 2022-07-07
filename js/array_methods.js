@@ -27,7 +27,7 @@
 
 // JOIN
 
-let arr = ['a' , 'b', 'c']
+// let arr = ['a' , 'b', 'c']
 
 // console.log(arr.join())
 
@@ -60,7 +60,7 @@ let arr = ['a' , 'b', 'c']
 
 // INCLUDES
 
-let niz = [1, 2, 3, 4, 20, 12, 200, 13, 405]
+// let niz = [1, 2, 3, 4, 20, 12, 200, 13, 405]
 
 // console.log(niz.includes(1));
 
