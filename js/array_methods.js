@@ -154,3 +154,13 @@
 // setTimeout(() => {
     // console.log()
 // }, 1000)
+
+// let str = 'Miroslav'
+
+// str.substring()
+
+// function deoStringa(string, start, end = string.length - 1) {
+    
+// }
+
+// 1 == 0 ? true : false //ternary operator

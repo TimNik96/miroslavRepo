@@ -1,3 +1,9 @@
+#Handy_things
+
+https://mastery.games/flexboxzombies/
+https://flexboxfroggy.com/
+https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desktop
+
 #Domaci_1
 
 1. Napisati funkciju koja vraca imena iz niza koja imaju bar dva slova 'a'.

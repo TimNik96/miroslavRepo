@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: column-reverse;
+            /* flex-wrap: ; */
+            /* order: ; */
+            justify-content: space-between;
+            align-items: center;
+            row-gap: 2rem;
+            /* column-gap: 5rem; */
+            height: 50vh;
+        }
+
+        .column {
+            background-color: yellow;
+            width: 20%;
+        }
+
+        .deff {
+            order: -1;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column deff">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam labore esse expedita aperiam, molestias fugit asperiores magni nisi accusamus id dolores reprehenderit perspiciatis suscipit optio itaque veritatis cumque tenetur iusto.
+        </div>
+        <div class="column">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque aut quia at modi fugit quisquam provident
+            odit sed quae ipsa corporis, tenetur veritatis, excepturi molestiae repudiandae necessitatibus, harum
+            quibusdam perferendis!
+        </div>
+        <div class="column"> 
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, quisquam sit,
+            molestias quia odit sed nobis expedita, quaerat dicta in sequi non aperiam sapiente! Minus exercitationem
+            maxime iusto saepe quasi!
+        </div>
+        
+    </div>
+</body>
+
+</html>
