@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+#logo img {
+    height: 30px;
+}
+#menu-icon img {
+    height: 30px;
+}
+.background {
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    margin-bottom: 5%;
+}
+.background .background-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.background .background-img img {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    width: 100%
+}
+.background .background-img .img-text {
+    text-shadow: 2.5px 3px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    position: absolute;
+    top: 110px;
+}
+.background .background-img .img-text h1 {
+    font-weight: bolder;
+    font-size: 6rem;
+    margin-bottom: 5%;
+    color: rgba(200, 45, 84, 0.9);
+}
+.background .background-img .img-text p {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+    padding-left: 10%;
+    height: 500px;
+    margin-bottom: 10%;
+}
+.picture-in-picture {
+    position: relative;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.picture-in-picture .back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.picture-in-picture .front {
+    position: absolute;
+    height: 200px;
+    top: 60%;
+    left: 40%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.mountains {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 1%;
+    margin-bottom: 5%;
+}
+.mountains h2 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 3rem;
+    color: rgba(200, 45, 84);
+    ;
+    margin-bottom: 4%;
+    line-height: 0.1rem;
+}
+.mountains h2 p {
+    font-family: serif;
+    color: rgb(30, 30, 150);
+    font-size: 2.2rem;
+    text-align: right;
+    text-transform: lowercase;
+}
+.mountains p,
+.opis {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: rgb(71, 71, 71);
+}
+.btn {
+    display: inline-block;
+    background-color: rgba(200, 45, 84);
+    padding: 15px 35px;
+    border-radius: 35px;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    margin-top: 5%;
+}
+.btn a {
+    color: aliceblue;
+}
+.btn:hover {
+    background-color: rgb(255, 129, 156);
+}
+.hiking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.hiking h2 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 5rem;
+    color: rgba(200, 45, 84);
+    margin-bottom: 4%;
+    line-height: 2.5rem;
+}
+.hiking h2 p {
+    font-family: serif;
+    color: rgb(30, 30, 150);
+    font-size: 3rem;
+    text-transform: none;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.one-of-three {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    padding: 0 4%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5rem;
+}
+.one-of-three h3,
+.one-of-three a {
+    color: rgb(255, 177, 148);
+    transition: all 0.3s;
+}
+.one-of-three a:hover {
+    color: coral;
+}
+.top-img img {
+    height: 3rem;
+}
+.sec2 {
+    flex-direction: row-reverse;
+}
+.title {
+    width: 400px;
+}
+.part2 {
+    height: 200px;
+    ;
+}
+footer {
+    background-color: rgb(30, 30, 150);
+    height: 30vh;
+    clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer p {
+    text-align: center;
+    margin-bottom: 2%;
+    color: white;
+}
+.footer-wrapper {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.footer-wrapper .icons img {
+    height: 1.5rem;
+}
+.footer-wrapper .pages a {
+    margin-right: 15px;
+    color: white;
+}
