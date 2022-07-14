@@ -85,23 +85,29 @@
 
 // 3. Napisati funkciju koja refaktorise string tako da posle svake tacke treba da se nalazi razmak. Primer: Danas je lep dan.Idemo da setamo. => Danas je lep dan. Idemo da setamo.
 
-let recenica =
-  "Danas je lep dan.Idemo da setamo.Oces da prosetamo?Brze!Hoces da prosetamo npr.?";
+// const proveraKarakter = (karakter) => {
+//   return karakter === karakter.toUpperCase()
+// }
+
+// let recenica =
+//   "Danas je lep dan.Idemo da setamo.Oces da prosetamo?Brze!Hoces da prosetamo npr.?";
 
 // const odvajac = (str) => {
 //   let newStr = [];
-//   for (let i = 0; i < str.length; i++) {
-//     // newStr = [];
-//     if (str[i] === ".") {
-//       newStr.push(str.substring(0, i + 1));
-
+//   let pocetakRecenice = 0
+  
+//   for (let i = 0; i < str.length ; i++) {
+//     if (str[i] === "." || str[i] === "!" || str[i] === "?") {
+//       newStr.push(str.substring(pocetakRecenice, i + 1));
+//       pocetakRecenice = i + 1
 //       console.log(newStr);
 //     }
 //   }
-//   console.log(newStr);
+
+//   return newStr
 // };
 
-console.log(odvoji(recenica));
+// console.log(odvajac(recenica));
 
 // console.log(odvajac(recenica));
 
