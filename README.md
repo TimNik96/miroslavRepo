@@ -28,3 +28,10 @@ https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desk
 		ispis u konzoli:  pokemon_1: jacina napada je 55
 			  	  pokemon_2: jacina napada je 70
 			  	  pokemon_3: jacina napada je 40
+
+#Domaci_3
+
+sajt:
+	https://drive.google.com/drive/u/0/folders/1cLzKlUyI2OkiDaUzZ7YjCiM4LXgkszH8
+
+
