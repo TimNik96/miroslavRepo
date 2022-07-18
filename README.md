@@ -34,4 +34,4 @@ https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desk
 sajt:
 	https://drive.google.com/drive/u/0/folders/1cLzKlUyI2OkiDaUzZ7YjCiM4LXgkszH8
 
-
+1. Izbaciti sve elemente iz niza koji se ponavljaju.
