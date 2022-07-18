@@ -164,3 +164,51 @@
 // }
 
 // 1 == 0 ? true : false //ternary operator
+
+
+// 1. Izbaciti sve elemente iz niza koji se ponavljaju.
+
+
+// const ponavljanje = (niz) => {
+//     let niz1=[]
+//     for (let i = 0; i < niz.length; i++) {
+//         if (!niz1.includes(niz[i])) {
+//             niz1.push(niz[i])
+//         }
+        
+//     }
+//     return niz1
+// }
+
+// const ponavljanjeMap = (niz) => {
+//     niz.sort((a,b)=>a-b).map(el =>{
+//         if (el !== niz.indexOf(el)-1) {
+            
+//         }
+//     })
+// }
+
+
+
+// let niz = [1,2,3,4,5,5,6,2,2,1,1]
+
+// console.log(ponavljanjeMap(niz));
+
+// const rendomEl = (arrLength,randomRange = arrLength)=>{
+//     let niz = []
+//     let rendom
+    
+
+//     for (let i = 0; niz.length < arrLength; i++) {
+//         rendom = Math.ceil(Math.random()*randomRange)
+
+//         if (niz.includes(rendom)) {
+//             continue
+//         }niz.push(rendom)
+            
+//     }
+//     return niz
+
+// }
+
+// console.log(rendomEl(20).sort((a,b)=>a-b));
