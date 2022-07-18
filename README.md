@@ -35,3 +35,4 @@ sajt:
 	https://drive.google.com/drive/u/0/folders/1cLzKlUyI2OkiDaUzZ7YjCiM4LXgkszH8
 
 1. Izbaciti sve elemente iz niza koji se ponavljaju.
+2. Ubaciti 20 elemenata u niz koji se rendom generisu, ali se u nizu ne sme ponoviti element.
