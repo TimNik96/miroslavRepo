@@ -1,5 +1,20 @@
 #Handy_things
 
+sass json settings 
+
+"liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/sass/css",
+            "savePathSegmentKeys": null,
+            "savePathReplaceSegmentsWith": null
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [
+    
+    ]
+
 https://mastery.games/flexboxzombies/
 https://flexboxfroggy.com/
 https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desktop
