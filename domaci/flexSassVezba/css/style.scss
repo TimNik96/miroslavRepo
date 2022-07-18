@@ -1,0 +1,207 @@
+@import'./resets';
+@import'./variables';
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name)
+};
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin button{
+        @include flexCenter(row);
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid $text-color2;
+        height: 50px;
+        width: 150px;
+        background-color: $background-color2;
+        transition: all 0.5s;
+        a {
+            color: $text-color2;
+            font-size: 1.2rem;
+            transition: all 0.4s;
+        }
+        &:hover {
+            background-color: lighten($background-color2, 15%);
+            
+            a {
+                color: darken($background-color2, 50%);
+            }
+        }
+}
+@mixin roundedImage{
+        margin-left: 5%;
+        border-radius: 50%;
+        padding: 0.5%;
+        border: 1px solid;
+        transition: all 0.7s;
+        img {
+            border-radius: 50%;
+            @include flexCenter(row)
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+}
+@mixin sections {
+    padding: 4%;
+        @include flexCenter(row);
+        flex-wrap: wrap;
+
+        .imgRounded {
+            @include roundedImage();
+        }
+    
+        .description {
+            margin: 5%;
+            color: $text-color1;
+            width: 50vw;
+            @include flexCenter(column);
+            align-items: flex-start;
+    
+            h2 {
+                margin-bottom: 5%;
+            }
+    
+            .btn {
+                @include button();
+                margin-top: 5%;
+            }
+        }
+}
+
+header{
+    @include flexCenter(row);
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    background-image: url("../slike/Nikola\ Timotic\ -\ banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+
+    .color-over-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header-text{
+        @include flexCenter(column);
+        position: absolute;
+        width: 600px;
+        color: $text-color2;
+        text-align: center;
+        h1{
+            font-size: 3rem;
+            font-weight: weight(bold);
+            margin-bottom: 5%;
+        }
+        p{
+            font-size:1.2rem;
+            line-height: 1.5;
+            margin-bottom: 5%;
+        }
+        .btn{
+            @include button();
+        }
+        
+    }
+}
+main{
+    
+    section{
+       @include sections()
+    }
+    .section2{
+        background-color: $background-color2;
+        flex-direction: row-reverse;
+        
+        .description{
+            color: $text-color2;
+            .btn {
+                    background-color: $text-color2;
+                    a{
+                        color: $background-color2;
+                    }
+                }
+        }
+    }
+
+    .ending-container{
+        
+        @include flexCenter(column);
+        
+        text-align: center;
+        padding: 3%;
+        .about{
+            color: $text-color1;
+            h3{
+                padding: 3%;
+                font-size: 1.9rem;
+
+            }
+            p{
+                padding: 3%;
+                font-size: 1.1rem;
+                margin-bottom: 5%
+            }
+
+        }
+        .wrapper{
+            @include flexCenter(row);
+            justify-content: space-evenly;
+            .our-clients{
+                
+                @include flexCenter(column);
+                .roundedImg{
+                    @include roundedImage();
+                    margin-bottom: 5%;
+                    &:hover {
+                            transform: scale(1.1);
+                        }
+                }
+                p{
+                    font-size: 1.1rem;
+                    margin-bottom: 5%;
+                    padding:1% 10%;
+                }
+                .btn{
+                    @include button();
+                    margin-top: 3%;
+                }
+            }
+            
+        }
+    }
+}
+footer{
+    @include flexCenter(column);
+    padding:5%;
+    background-color: $text-color1;
+    color: $text-color2;
+    column-gap: 20px;
+    p{
+        font-size: 1.1rem;
+        margin-top: 2%
+    }
+    .circles{
+        @include flexCenter(row);
+        .circle{
+            
+            width: 80px;
+            height: 80px;
+            background-color: aliceblue;
+            margin-right: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 5px gray;
+            
+        }
+    }
+}

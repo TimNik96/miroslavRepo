@@ -95,7 +95,7 @@
 // const odvajac = (str) => {
 //   let newStr = [];
 //   let pocetakRecenice = 0
-  
+
 //   for (let i = 0; i < str.length ; i++) {
 //     if (str[i] === "." || str[i] === "!" || str[i] === "?") {
 //       newStr.push(str.substring(pocetakRecenice, i + 1));
@@ -104,7 +104,7 @@
 //     }
 //   }
 
-//   return newStr
+//   return newStr.join(" ")
 // };
 
 // console.log(odvajac(recenica));
