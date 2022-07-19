@@ -16,8 +16,10 @@ sass json settings
     ]
 
 https://mastery.games/flexboxzombies/
-https://flexboxfroggy.com/
+https://flexboxfroggy.com/ // gridGarden
 https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desktop
+
+https://animista.net/play/basic/rotate-90/rotate-90-horizontal-fwd
 
 #Domaci_1
 
@@ -51,3 +53,12 @@ sajt:
 
 1. Izbaciti sve elemente iz niza koji se ponavljaju.
 2. Ubaciti 20 elemenata u niz koji se rendom generisu, ali se u nizu ne sme ponoviti element.
+
+#Domaci_4
+
+sajt: 
+    https://drive.google.com/drive/folders/1OsmwfIQkviCjClSLoznmReZV8XbyWZ4P
+forme:
+    https://drive.google.com/drive/folders/1SAgXUGaIIxp9vckX5Unv1oX6r_i8_qSF
+animacije: 
+    https://drive.google.com/drive/folders/14LzTCelERy3shuU-OxfUKuPYEceWZ6HP
