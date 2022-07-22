@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gray;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+.kutija {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 10%;
+  animation: kutija;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+.novcic {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  top: 15%;
+  animation-name: novcic;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.mario {
+  position: relative;
+  left: 100px;
+  height: 400px;
+}
+@keyframes kutija {
+  0% {
+    top: 10%;
+  }
+  100% {
+    top: 9%;
+  }
+}
+@keyframes novcic {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    top: 5%;
+    opacity: 0;
+    transform: rotateY(360deg);
+  }
+}
