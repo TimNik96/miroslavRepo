@@ -1,0 +1,678 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+header {
+  position: relative;
+  height: 70vh;
+  background: url("../images/Desktop - 1 (1).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header nav {
+  padding: 3% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header nav .logo a {
+  color: gold;
+  font-size: 2rem;
+}
+header nav .pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 40%;
+}
+header nav .pages div {
+  margin-right: 20px;
+}
+header nav .pages a {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+header nav .pages a:hover {
+  color: gold;
+}
+header .header-text {
+  text-align: center;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+}
+header .header-text p {
+  font-size: 2rem;
+  margin-bottom: 2%;
+  text-transform: capitalize;
+}
+header .header-text h1 {
+  padding-bottom: 4%;
+}
+header .header-text .btn {
+  background-color: gold;
+  text-transform: uppercase;
+  padding: 2% 6%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+header .header-text .btn a {
+  color: rgb(255, 255, 255);
+}
+header .header-text .btn:hover {
+  background-color: #ccac00;
+}
+
+main .container1 {
+  padding: 0 10%;
+  margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0 2%;
+  grid-template-areas: "services services services" ". . .";
+  justify-content: space-evenly;
+}
+main .container1 p {
+  color: rgb(83, 83, 83);
+}
+main .container1 .services {
+  grid-area: services;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .container1 .services h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+main .container1 .services p {
+  color: rgb(83, 83, 83);
+}
+main .container1 .under-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10%;
+  margin-bottom: 5%;
+}
+main .container1 .under-services img {
+  padding: 3%;
+  height: 7rem;
+  width: 7rem;
+  border: 5px solid gold;
+  border-radius: 50%;
+  margin-bottom: 5%;
+}
+main .container1 .under-services h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5%;
+}
+main .container2 {
+  padding: 0 10% 5% 10%;
+  background-color: rgb(240, 240, 240);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3% 3%;
+  grid-auto-flow: row;
+  justify-content: space-evenly;
+  grid-template-areas: "our-portfolio our-portfolio our-portfolio" ". . ." ". . .";
+}
+main .our-portfolio {
+  grid-area: our-portfolio;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .our-portfolio h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+main .our-portfolio p {
+  color: rgb(83, 83, 83);
+}
+main .portfolio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+main .portfolio img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .portfolio .text {
+  text-align: center;
+  padding: 5%;
+}
+main .portfolio .text h4 {
+  font-size: 1.5rem;
+}
+main .portfolio .text p {
+  font-size: 1.1rem;
+  color: rgb(83, 83, 83);
+}
+main .portfolio:hover {
+  box-shadow: 15px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  transform: translate(0, -10px);
+}
+main .container3 {
+  padding: 0 10% 5% 10%;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 7% 0%;
+  grid-auto-flow: row;
+  justify-content: center;
+  grid-template-areas: "about about about about about" "tekst tekst slika1 . ." ". . s2 text2 text2" "tekst3 tekst3 s3 . ." ". . s4 tekst4 tekst4" ". . s5 . .";
+}
+main .container3 .picture {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 10px;
+  position: relative;
+  margin: 0 auto;
+  background-color: rgb(240, 240, 240);
+}
+main .container3 .picture img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container3 .picture hr {
+  position: absolute;
+  width: 3px;
+  z-index: -5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: rgb(240, 240, 240);
+}
+main .container3 .s5 {
+  background-color: gold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 10px solid rgb(240, 240, 240);
+  margin-bottom: 15%;
+}
+main .container3 .s5 p {
+  font-size: 2rem;
+  text-align: center;
+}
+main .about {
+  grid-area: about;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .about h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+main .about p {
+  color: rgb(83, 83, 83);
+}
+main .tekst {
+  grid-area: tekst;
+}
+main .slika1 {
+  grid-area: slika1;
+}
+main .s2 {
+  grid-area: s2;
+}
+main .s3 {
+  grid-area: s3;
+}
+main .s4 {
+  grid-area: s4;
+}
+main .s5 {
+  grid-area: s5;
+}
+main .text2 {
+  grid-area: text2;
+}
+main .tekst3 {
+  grid-area: tekst3;
+}
+main .tekst4 {
+  grid-area: tekst4;
+}
+main .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 10%;
+}
+main .left h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+main .left h5 {
+  font-size: 1.2rem;
+}
+main .left p {
+  margin-top: 3%;
+  color: rgb(83, 83, 83);
+}
+main .left .text {
+  text-align: right;
+}
+main .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 10%;
+}
+main .right h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+main .right h5 {
+  font-size: 1.2rem;
+}
+main .right p {
+  margin-top: 3%;
+  color: rgb(83, 83, 83);
+}
+main .right .text {
+  text-align: left;
+}
+main .container4 {
+  background-color: rgb(240, 240, 240);
+  padding: 0 10% 5% 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3% 0%;
+  grid-auto-flow: row;
+  justify-content: space-evenly;
+  grid-template-areas: "our-team our-team our-team" "member1 member2 member3" "team-text team-text team-text";
+}
+main .container4 p {
+  color: rgb(83, 83, 83);
+}
+main .our-team {
+  grid-area: our-team;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .our-team h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+main .our-team p {
+  color: rgb(83, 83, 83);
+}
+main .member1 {
+  grid-area: member1;
+}
+main .member2 {
+  grid-area: member2;
+}
+main .member3 {
+  grid-area: member3;
+}
+main .team-text {
+  grid-area: team-text;
+  text-align: center;
+  margin-top: 10%;
+}
+main .member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .member .picture {
+  width: 10em;
+  height: 10em;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+main .member img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+main .member img:hover {
+  transform: scale(1.1);
+}
+main .member .name {
+  text-align: center;
+  margin: 5%;
+}
+main .member .name h4 {
+  font-size: 1.4rem;
+}
+main .member .social-network i {
+  color: rgb(31, 31, 31);
+}
+main .container5 {
+  padding: 5% 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0% 0%;
+  grid-auto-flow: row;
+  justify-content: space-evenly;
+}
+main .container5 div img {
+  width: 10rem;
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+}
+main .container5 div img:hover {
+  filter: grayscale(0%);
+}
+main .container6 {
+  padding: 2% 10%;
+  height: 80vh;
+  text-align: center;
+  background-color: rgb(27, 27, 27);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2%;
+  grid-auto-flow: row;
+  justify-content: space-evenly;
+  grid-template-areas: "contact-us " "form1 " "commit-button";
+}
+main .contact-us {
+  grid-area: contact-us;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+main .contact-us h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+main .contact-us p {
+  color: rgb(83, 83, 83);
+}
+main .commit-button {
+  grid-area: commit-button;
+}
+main .commit-button .button {
+  background-color: gold;
+  text-transform: uppercase;
+  padding: 2% 6%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  color: white;
+}
+main .commit-button .button a {
+  color: rgb(255, 255, 255);
+}
+main .commit-button .button:hover {
+  background-color: #ccac00;
+}
+main .form1 {
+  height: 40%;
+  grid-area: form1;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  gap: 15px;
+  grid-template-areas: "name1 textarea" "mail textarea" "subject textarea";
+}
+main .form1 .name {
+  grid-area: name1;
+  padding: 3%;
+  font-size: 1.5rem;
+}
+main .form1 textarea {
+  grid-area: textarea;
+  resize: none;
+  padding: 3%;
+  font-size: 1.5rem;
+}
+main .form1 .mail {
+  grid-area: mail;
+  padding: 3%;
+  font-size: 1.5rem;
+}
+main .form1 .subject {
+  grid-area: subject;
+  padding: 3%;
+  font-size: 1.5rem;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2% 10%;
+  justify-content: space-evenly;
+}
+footer .social {
+  text-align: center;
+}
+footer .social i {
+  color: rgb(29, 29, 29);
+  transition: all 0.3s ease-in-out;
+}
+footer .social i:hover {
+  color: rgb(50, 50, 50);
+}
+footer .f-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .container6 {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  header nav .pages {
+    display: none;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+  main .container1 {
+    height: 60vh;
+  }
+  main .container1 .under-services {
+    justify-content: flex-start;
+    padding: 1%;
+  }
+  main .container3 {
+    gap: 2% 0%;
+    margin-bottom: 2%;
+  }
+  main .container3 h4 {
+    font-size: 1.2rem;
+  }
+  main .container3 .picture {
+    height: 10rem;
+    width: 10rem;
+  }
+  main .container3 .picture hr {
+    height: 700px;
+  }
+  main .container4 {
+    height: 90vh;
+  }
+  main .container5 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  main .container5 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    height: 80vh;
+  }
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main .container1 {
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  main .container1 .services {
+    padding: 5% 5%;
+  }
+  main .container1 .services h3 {
+    font-size: 2.5rem;
+  }
+  main .container2 {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+  }
+  main .container2 h3 {
+    font-size: 2.5rem;
+  }
+  main .container2 .portfolio {
+    margin: 7% 0%;
+  }
+  main .container3 {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1% 0%;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: "about about" "tekst slika1" "s2 text2" "tekst3 s3" "s4 tekst4" " s5 s5";
+  }
+  main .container3 .text {
+    padding: 5%;
+  }
+  main .container3 .picture hr {
+    display: none;
+  }
+  main .container4 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    padding-top: 5%;
+  }
+  main .container4 .our-team {
+    margin-bottom: 7%;
+  }
+  main .container4 .our-team h3 {
+    font-size: 2.3rem;
+    margin-bottom: 3%;
+  }
+  main .container4 .member {
+    margin: 7% 0;
+  }
+  main .container5 {
+    display: none;
+  }
+  main .container6 .form1 {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "name1" "mail" "subject" "textarea";
+  }
+  main .container6 .form1 textarea {
+    height: 10vh;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=main.css.map */

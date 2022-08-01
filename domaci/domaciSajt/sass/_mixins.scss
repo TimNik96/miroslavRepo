@@ -1,0 +1,33 @@
+@use "./variables" as *;
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin button {
+  background-color: $gold;
+  text-transform: uppercase;
+  padding: 2% 6%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  a {
+    color: $text-color1;
+  }
+  &:hover {
+    background-color: darken($gold, 10);
+  }
+}
+@mixin services {
+  h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1%;
+  }
+  p {
+    color: $text-color2;
+  }
+  text-align: center;
+  @include flexCenter(column);
+}

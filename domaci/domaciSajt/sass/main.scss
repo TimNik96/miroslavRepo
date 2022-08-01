@@ -1,0 +1,629 @@
+@use "./helper" as *;
+
+header {
+  position: relative;
+  height: 70vh;
+  background: url("../images/Desktop\ -\ 1\ \(1\).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  nav {
+    .logo {
+      a {
+        color: $gold;
+        font-size: 2rem;
+      }
+    }
+    padding: 3% 10%;
+    @include flexCenter(row);
+    justify-content: space-between;
+    .pages {
+      @include flexCenter(row);
+      justify-content: space-around;
+      width: 40%;
+      div {
+        margin-right: 20px;
+      }
+      a {
+        color: $text-color1;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        &:hover {
+          color: $gold;
+        }
+      }
+    }
+  }
+  .header-text {
+    text-align: center;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include flexCenter(column);
+    color: $text-color1;
+    p {
+      font-size: 2rem;
+      margin-bottom: 2%;
+      text-transform: capitalize;
+    }
+    h1 {
+      padding-bottom: 4%;
+    }
+    .btn {
+      @include button;
+    }
+  }
+}
+main {
+  .container1 {
+    padding: 0 10%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 2%;
+    grid-template-areas:
+      "services services services"
+      ". . .";
+    justify-content: space-evenly;
+    p {
+      color: $text-color2;
+    }
+    .services {
+      grid-area: services;
+      @include services;
+    }
+
+    .under-services {
+      @include flexCenter(column);
+      text-align: center;
+      padding: 10%;
+      margin-bottom: 5%;
+
+      img {
+        padding: 3%;
+        height: 7rem;
+        width: 7rem;
+        border: 5px solid gold;
+        border-radius: 50%;
+        margin-bottom: 5%;
+      }
+      h4 {
+        font-size: 1.5rem;
+        margin-bottom: 5%;
+      }
+    }
+  }
+  .container2 {
+    padding: 0 10% 5% 10%;
+    background-color: $bacground-color1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3% 3%;
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+    grid-template-areas:
+      "our-portfolio our-portfolio our-portfolio"
+      ". . ."
+      ". . .";
+  }
+
+  .our-portfolio {
+    grid-area: our-portfolio;
+    @include services;
+  }
+
+  .portfolio {
+    position: relative;
+    @include flexCenter(column);
+    background-color: white;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .text {
+      text-align: center;
+      padding: 5%;
+
+      h4 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+        color: $text-color2;
+      }
+    }
+    &:hover {
+      box-shadow: 15px 5px 10px 0 rgba(0, 0, 0, 0.3);
+      transform: translate(0, -10px);
+    }
+  }
+  .container3 {
+    padding: 0 10% 5% 10%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 7% 0%;
+    grid-auto-flow: row;
+    justify-content: center;
+    grid-template-areas:
+      "about about about about about"
+      "tekst tekst slika1 . ."
+      ". . s2 text2 text2"
+      "tekst3 tekst3 s3 . ."
+      ". . s4 tekst4 tekst4"
+      ". . s5 . .";
+    .picture {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      padding: 10px;
+      position: relative;
+      margin: 0 auto;
+      background-color: $bacground-color1;
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      hr {
+        position: absolute;
+        width: 3px;
+        z-index: -5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: $bacground-color1;
+      }
+    }
+    .s5 {
+      background-color: $gold;
+      color: white;
+      @include flexCenter(column);
+      border: 10px solid $bacground-color1;
+      margin-bottom: 15%;
+      p {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .about {
+    grid-area: about;
+    @include services;
+  }
+
+  .tekst {
+    grid-area: tekst;
+  }
+
+  .slika1 {
+    grid-area: slika1;
+  }
+
+  .s2 {
+    grid-area: s2;
+  }
+
+  .s3 {
+    grid-area: s3;
+  }
+
+  .s4 {
+    grid-area: s4;
+  }
+
+  .s5 {
+    grid-area: s5;
+  }
+
+  .text2 {
+    grid-area: text2;
+  }
+
+  .tekst3 {
+    grid-area: tekst3;
+  }
+
+  .tekst4 {
+    grid-area: tekst4;
+  }
+  .left {
+    @include flexCenter(row);
+    padding-right: 10%;
+    h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    h5 {
+      font-size: 1.2rem;
+    }
+    p {
+      margin-top: 3%;
+      color: $text-color2;
+    }
+    .text {
+      text-align: right;
+    }
+  }
+  .right {
+    @include flexCenter(row);
+    padding-left: 10%;
+    h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    h5 {
+      font-size: 1.2rem;
+    }
+    p {
+      margin-top: 3%;
+      color: $text-color2;
+    }
+    .text {
+      text-align: left;
+    }
+  }
+  .container4 {
+    background-color: $bacground-color1;
+    padding: 0 10% 5% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3% 0%;
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+    grid-template-areas:
+      "our-team our-team our-team"
+      "member1 member2 member3"
+      "team-text team-text team-text";
+    p {
+      color: $text-color2;
+    }
+  }
+
+  .our-team {
+    grid-area: our-team;
+    @include services;
+  }
+
+  .member1 {
+    grid-area: member1;
+  }
+
+  .member2 {
+    grid-area: member2;
+  }
+
+  .member3 {
+    grid-area: member3;
+  }
+
+  .team-text {
+    grid-area: team-text;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .member {
+    @include flexCenter(column);
+    .picture {
+      width: 10em;
+      height: 10em;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .name {
+      text-align: center;
+      margin: 5%;
+      h4 {
+        font-size: 1.4rem;
+      }
+    }
+    .social-network {
+      i {
+        color: rgb(31, 31, 31);
+      }
+    }
+  }
+  .container5 {
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0% 0%;
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+
+    div {
+      img {
+        width: 10rem;
+        filter: grayscale(100%);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+  .container6 {
+    padding: 2% 10%;
+    height: 80vh;
+    text-align: center;
+    background-color: rgb(27, 27, 27);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2%;
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+    grid-template-areas:
+      "contact-us "
+      "form1 "
+      "commit-button";
+  }
+
+  .contact-us {
+    grid-area: contact-us;
+    @include services;
+    color: white;
+  }
+
+  .commit-button {
+    grid-area: commit-button;
+    .button {
+      @include button;
+      border: none;
+      color: white;
+    }
+  }
+
+  .form1 {
+    height: 40%;
+    grid-area: form1;
+
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    gap: 15px;
+    grid-template-areas:
+      "name1 textarea"
+      "mail textarea"
+      "subject textarea";
+
+    .name {
+      grid-area: name1;
+      padding: 3%;
+      font-size: 1.5rem;
+    }
+
+    textarea {
+      grid-area: textarea;
+
+      resize: none;
+      padding: 3%;
+      font-size: 1.5rem;
+    }
+
+    .mail {
+      grid-area: mail;
+      padding: 3%;
+      font-size: 1.5rem;
+    }
+    .subject {
+      grid-area: subject;
+      padding: 3%;
+      font-size: 1.5rem;
+    }
+  }
+}
+footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2% 10%;
+  justify-content: space-evenly;
+
+  .social {
+    text-align: center;
+    i {
+      color: rgb(29, 29, 29);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: rgb(50, 50, 50);
+      }
+    }
+  }
+  .f-text {
+    @include flexCenter(row);
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container6 {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    nav {
+      .pages {
+        display: none;
+      }
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  main {
+    .container1 {
+      height: 60vh;
+      .under-services {
+        justify-content: flex-start;
+        padding: 1%;
+      }
+    }
+    .container3 {
+      gap: 2% 0%;
+      margin-bottom: 2%;
+      h4 {
+        font-size: 1.2rem;
+      }
+      .picture {
+        height: 10rem;
+        width: 10rem;
+        hr {
+          // display: none;
+          height: 700px;
+        }
+      }
+    }
+    .container4 {
+      height: 90vh;
+    }
+    .container5 {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    height: 80vh;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 5%;
+      margin-top: 5%;
+    }
+  }
+  main {
+    padding-left: 0;
+    padding-right: 0;
+    .container1 {
+      padding-left: 0;
+      padding-right: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      .services {
+        padding: 5% 5%;
+        h3 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .container2 {
+      padding-left: 0;
+      padding-right: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 5%;
+      h3 {
+        font-size: 2.5rem;
+      }
+      .portfolio {
+        margin: 7% 0%;
+      }
+    }
+    .container3 {
+      padding-left: 0;
+      padding-right: 0;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 1% 0%;
+      justify-content: center;
+      align-content: center;
+      grid-template-areas:
+        "about about"
+        "tekst slika1"
+        "s2 text2"
+        "tekst3 s3"
+        "s4 tekst4"
+        " s5 s5";
+
+      .text {
+        padding: 5%;
+      }
+      .picture {
+        hr {
+          display: none;
+        }
+      }
+    }
+
+    .container4 {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5%;
+      padding-top: 5%;
+      .our-team {
+        margin-bottom: 7%;
+        h3 {
+          font-size: 2.3rem;
+          margin-bottom: 3%;
+        }
+      }
+      .member {
+        margin: 7% 0;
+      }
+    }
+    .container5 {
+      display: none;
+    }
+    .container6 {
+      .form1 {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "name1"
+          "mail"
+          "subject"
+          "textarea";
+        textarea {
+          height: 10vh;
+        }
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
