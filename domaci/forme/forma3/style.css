@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.mainWrapper {
+  padding: 1%;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 5%;
+
+  border: 2px solid black;
+}
+
+form {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-template-areas:
+    "title title title"
+    "title title title"
+    "enter-name name name"
+    "enter-password password password"
+    "enter-address textarea textarea"
+    "enter-address textarea textarea"
+    "enter-address textarea textarea"
+    "select-games sports sports"
+    "select-games sports sports"
+    "select-games sports sports"
+    "select-games sports sports"
+    "select-games sports sports"
+    "gender male-female male-female"
+    "age age-input age-input"
+    "files files files"
+    "buttons buttons buttons"
+    "buttons buttons buttons";
+  justify-content: space-evenly;
+}
+#title {
+  grid-area: title;
+  background-color: yellow;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#enter-name,
+.info,
+#enter-address,
+#select-games,
+#gender,
+#age,
+#files,
+#buttons {
+  grid-area: enter-name;
+  background-color: aqua;
+  padding-left: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#name,
+.input1,
+#textarea1,
+#male-female,
+#age-input,
+#buttons {
+  grid-area: name;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#name1,
+#password1,
+textarea,
+#age-input1 {
+  background-color: aquamarine;
+  width: 90%;
+  height: 96%;
+  padding: 2%;
+}
+#enter-password {
+  grid-area: enter-password;
+}
+#password {
+  grid-area: password;
+}
+#enter-address {
+  grid-area: enter-address;
+}
+#textarea1 {
+  grid-area: textarea;
+}
+#select-games {
+  grid-area: select-games;
+}
+.sports {
+  grid-area: sports;
+  background-color: aqua;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#gender {
+  grid-area: gender;
+}
+#male-female {
+  grid-area: male-female;
+  justify-content: flex-start;
+}
+#Male {
+  margin-left: 5%;
+  margin-right: 2%;
+}
+#Female {
+  margin-left: 5%;
+  margin-right: 2%;
+}
+#age {
+  grid-area: age;
+}
+#age-input {
+  grid-area: age-input;
+}
+#files {
+  grid-area: files;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#files input {
+  padding: 1%;
+  background-color: aquamarine;
+}
+#buttons {
+  grid-area: buttons;
+}
+#buttons button {
+  margin-left: 2%;
+  font-size: 1.2rem;
+  height: 96%;
+  padding: 3% 10%;
+  background-color: aquamarine;
+  border: none;
+  cursor: pointer;
+}

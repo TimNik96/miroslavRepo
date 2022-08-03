@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome to the 24*7 Fitnes Club</h1>
+    <form action="">
+      <fieldset>
+        <legend>Member Demographics</legend>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required />
+        </div>
+        <div class="member">
+          <p>Are you a member?</p>
+          <input type="radio" value="Member" name="member" />
+          <label for="Member">Member</label>
+          <input type="radio" value="Non-member" name="member" />
+          <label for="Non-member">Non-member</label><br />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="example@example.com"
+            required
+          />
+        </div>
+      </fieldset>
+      <div class="form2">
+        <div>
+            <label for="sport">Facility</label>
+      <select name="sport" id="sport">
+        <option value="badminton">Badminton</option>
+        <option value="basketball">Basketball</option>
+        <option value="football">Football</option>
+      </select>
+        </div>
+        <div>
+             <p>Select a reservation date and time:</p>
+      <input type="date" required /> <input type="time" required />
+        </div>
+        <br />
+     <div>
+         <input type="checkbox" value="iAgree" required />
+      <label for="iAgree">I agree to the club's reservation policy</label>
+     </div>
+     <br />
+      <input type="button" value="SUBMIT" />
+    </form>
+      </div>
+      
+  </body>
+</html>
