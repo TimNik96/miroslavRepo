@@ -62,3 +62,78 @@ forme:
     https://drive.google.com/drive/folders/1SAgXUGaIIxp9vckX5Unv1oX6r_i8_qSF
 animacije: 
     https://drive.google.com/drive/folders/14LzTCelERy3shuU-OxfUKuPYEceWZ6HP
+
+#Domaci_5
+
+#Domaci_6
+
+1. Napisati JS funkciju koja za prosleđeni string ispisuje 5 najčešće korišćenih karaktera kao i njihov
+broj ponavljanja:
+Izgled funkcije
+
+function printCount(inputStr){
+ //code here...
+}
+
+Primer ispisa za string xxxyyoopc
+x: 3
+y: 3
+o: 2
+p: 1
+c: 1
+
+2. Na klik elementa sa klasom swtf-task dodati mu kalsu selected ukoliko je već ne poseduje. U
+selektovanom elementu pronaći atribut(element sa klasom swtf-task-attr) pod nazivom
+IsActive i ukoliko postoji postaviti mu vrednost na true.
+
+<!-- <div class="swtf-task">
+ <p class="swtf-task-text">Lorem ipsum dolor sit amet, consectetur
+adipiscing elit</p>
+ <div class="swtf-task-attr">
+ <p><span class="attr-name">Priority</span> : <span
+class="attr-value">1</span><p>
+ </div>
+ <div class="swtf-task-attr">
+ <p><span class="attr-name">IsActive</span> : <span
+class="attr-value">false</span><p>
+ </div>
+</div>
+<div class="swtf-task">
+ <p class="swtf-task-text">Lorem ipsum dolor sit amet, consectetur
+adipiscing elit</p>
+<div class="swtf-task-attr">
+ <p><span class="attr-name">Priority</span> : <span
+class="attr-value">3</span><p>
+ </div>
+ <div class="swtf-task-attr">
+ <p><span class="attr-name">IsActive</span> : <span
+class="attr-value">false</span><p>
+ </div>
+</div>
+<div class="swtf-task">
+ <p class="swtf-task-text">Lorem ipsum dolor sit amet, consectetur
+adipiscing elit</p>
+</div>
+<div class="swtf-task">
+ <p class="swtf-task-text">Lorem ipsum dolor sit amet, consectetur
+adipiscing elit</p>
+ <div class="swtf-task-attr">
+ <p><span class="attr-name">Priority</span> : <span
+class="attr-value">5</span><p>
+ </div>
+ <div class="swtf-task-attr">
+ <p><span class="attr-name">IsActive</span> : <span
+class="attr-value">false</span><p>
+ </div>
+</div>
+<div class="swtf-task">
+ <p class="swtf-task-text">Lorem ipsum dolor sit amet, consectetur
+adipiscing elit</p>
+</div> -->
+
+3. Na hover dugmeta dodati klasu mu hovered, kada se izađe iz stanja haver-a obrisati klasu
+hovered. Na klik dugmeta izmeniti boju pozadine elementa sa klasom my-cnt na orange.
+
+<div class="my-cnt">
+ <button class="my-btn">
+</div>
