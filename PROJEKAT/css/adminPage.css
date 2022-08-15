@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(14, 12, 31, 1) 15%, rgba(79, 67, 188, 1) 100%);
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 10vh;
+    width: 95%;
+    margin: auto;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: .5rem;
+}
+
+h1 {
+    color: #68e0cc;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #68e0cc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 2% 10%;
+    border: 2px solid #68e0cc;
+    border-radius: 2rem;
+    transition-property: all;
+    transition-timing-function: ease-in;
+    transition-duration: .1s;
+}
+
+a:hover {
+   border-color: #0e0c1f;
+   color: #0e0c1f;
+}
+
+main {
+    width: 95%;
+    margin: 1% auto;
+    padding: 1%;
+    background-color: #0e0c1f;
+    border: 3px solid #3f43bc;
+    border-radius: 50px;
+    row-gap: 1rem;
+}
+
+#mainRow {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1%;
+    border-bottom: 2px solid #68e0cc;
+}
+
+#mainRow p {
+    font-size: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 1% 0%;
+    width: 95%;
+    margin: auto;
+    color: #68e0cc;
+}
+
+.row:hover {
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    font-size: 1.3rem;
+    width: 15%;
+}
+
+section {
+    text-align: right;
+    width: 96%;
+}
+
+section button {
+    padding: 1% 2%;
+    color: #68e0cc;
+    background-color: #0e0c1f;
+    border: 2px solid #4f43bc;
+    border-radius: 2rem;
+    filter: drop-shadow(0 0 10px #4f43bc);
+    margin-top: 1%;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+section button:focus {
+    background-color: #1b173c;
+}
+
+section button:hover {
+    filter: drop-shadow(0 0 10px #68e0cc);
+    color: #4f43bc;
+}

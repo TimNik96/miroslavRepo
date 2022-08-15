@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(14, 12, 31, 1) 15%, rgba(79, 67, 188, 1) 100%);
+}
+
+form {
+    padding: 3% 0%;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    background-color: #0e0c1f;
+    border: 3px solid #3f43bc;
+    border-radius: 100px;
+    animation-name: formAmbientLight;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.podaci {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45%;
+    row-gap: 1rem;
+}
+
+#formName {
+    font-size: 2rem;
+    color: #68e0cc;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+label {
+    color: #68e0cc;
+    font-size: 1.2rem;
+}
+
+::placeholder {
+    color: #68e0cc;
+    opacity: .5;
+}
+
+[type='text'],
+[type='password'],
+[type='email'],
+[type='date'],
+[type='tel'] {
+    padding: 2% 5%;
+    width: 100%;
+    border: 2px solid #4f43bc;
+    border-radius: 2rem;
+    background-color: #0e0c1f;
+    color: #68e0cc;
+    font-size: 1.3rem;
+    text-align: center;
+    transition-property: filter;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+    background: #68e0cc;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transition-property: background;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator:hover {
+    background: #4f43bc;
+}
+
+[type='text']:focus,
+[type='password']:focus,
+[type='submit']:focus,
+[type='email']:focus,
+[type='tel']:focus,
+[type='date']:focus {
+    outline: none;
+    filter: drop-shadow(0 0 20px #4f43bc);
+}
+
+a {
+    color: #68e0cc;
+    text-decoration: none;
+    margin-top: -1%;
+    padding: 1.5% 2%;
+    border-bottom: 1px solid #0e0c1f;
+    transition: border-bottom .5s ease-out;
+}
+
+a:focus {
+    outline: none;
+    border-bottom: 1px solid #4f43bc;
+}
+
+a:hover {
+    border-bottom: 1px solid #4f43bc;
+}
+
+[value='REGISTER'] {
+    padding: 1.5% 5%;
+    color: #68e0cc;
+    background-color: #0e0c1f;
+    border: 2px solid #4f43bc;
+    border-radius: 2rem;
+    filter: drop-shadow(0 0 10px #4f43bc);
+    margin-top: 2%;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+[value='REGISTER']:hover {
+    filter: drop-shadow(0 0 10px #68e0cc);
+    color: #4f43bc;
+}
+
+[value='REGISTER']:focus {
+    background-color: #1b173c;
+}
+
+@keyframes formAmbientLight {
+    0% {
+        filter: drop-shadow(0 0 0px #68e0cc);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 30px #68e0cc);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0px #68e0cc);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #formName {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    [type='text'],
+    [type='password'],
+    [type='email'],
+    [type='date'],
+    [type='tel'] {
+        font-size: 1rem;
+    }
+
+    [value='REGISTER'] {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        height: fit-content;
+        padding: 5% 0%;
+    }
+
+    #formName {
+        padding-bottom: 1%;
+    }
+
+    form {
+        border-radius: 50px;
+    }
+
+    .podaci {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .left,
+    .right {
+        width: 75%;
+    }
+
+    [value='REGISTER'] {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #formName {
+        font-size: 1.5rem;
+        padding-top: 2%;
+    }
+
+    form {
+        width: 85vw;
+    }
+
+    .podaci, .left, .right {
+        row-gap: 1.5rem;
+    }
+
+    .left,
+    .right {
+        width: 85%;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    [type='text'],
+    [type='password'],
+    [type='email'],
+    [type='date'],
+    [type='tel'] {
+        font-size: 1.2rem;
+    }
+
+    [value='REGISTER'] {
+        font-size: .8rem;
+        margin-bottom: 2%;
+        padding: 2% 8%;
+    }
+
+    @keyframes formAmbientLight {
+        0% {
+            filter: drop-shadow(0 0 0px #68e0cc);
+        }
+    
+        50% {
+            filter: drop-shadow(0 0 20px #68e0cc);
+        }
+    
+        100% {
+            filter: drop-shadow(0 0 0px #68e0cc);
+        }
+    }
+}
