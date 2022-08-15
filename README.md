@@ -147,7 +147,7 @@ hovered. Na klik dugmeta izmeniti boju pozadine elementa sa klasom my-cnt na ora
 5. Napisati kod koji iz inputa kupi broj i ispisuje broj sa ciframa u obrnutom redosledu u drugom inputu kao resenje.(Koristiti dugme) Primer: 1234 => 4321
 6. Napraviti par korisnika kao objekte u nizu. Dodati polja po izboru. Zatim ih lepo ispisati na stranici u nekom divu. (potruditi se malo oko stilizovanja)
 7. Napisati zadatak koji racuna cenu pizze prema unosu precnika iste. Cena pizze je dinar po kvadratnom centimetru. (Potrebno je imati input za precnik pizze i dugme za vracanje cene u drugom inputu)
-8. Korisnike iz 7. zadatka koristiti i ispisati samo one cije ime pocinje na slovo koje se zada u inputu. (Moze se koristiti dugme ili putem Entera, kako god je lakse)
+8. Korisnike iz 6. zadatka koristiti i ispisati samo one cije ime pocinje na slovo koje se zada u inputu. (Moze se koristiti dugme ili putem Entera, kako god je lakse)
 9. Napisati skriptu koja pravi x paragrafa. Svaki paran paragraf ima 30 reci lorem ipsum, a svaki treci ima zelenu boju pozadine.
 10. Napraviti igru kamen-papir-makaze u jednu pobedu. (postoji jedan input za unos zeljene opcije, u paragrafu ispod se na klik dugmeta ispisuje pobednik, a u konzoli se ispisuje sta je racunar odabrao. 
     Za opciju koju racunar treba da dobije potrebno je koristiti random())
