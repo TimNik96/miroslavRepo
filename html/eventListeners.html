@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="unos">
+        <input type="submit">
+    </form>
+
+    <button>
+        Dugme
+    </button>
+
+    <script>
+        const btn = document.querySelector('button')
+        const forma = document.querySelector('form')
+        const input = document.querySelector('#unos')
+
+        input.addEventListener('keypress', (event) => {
+            console.log(event.key);
+        })
+
+        btn.addEventListener('click', (event) => {
+            console.log(event);
+        })
+
+        forma.addEventListener('submit', (event) => {
+            event.preventDefault()
+
+            // if(event.key === "Enter")
+            console.log('submitovana forma');
+        })
+
+        const func = () => {
+
+        }
+
+        function func() {
+
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

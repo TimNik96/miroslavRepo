@@ -4,6 +4,7 @@
 
 // function printCount(str) {
 //   let saveCaractersandCounts = [];
+//   let b
 
 //   for (let i = 0; i < str.length; i++) {
 //     let count = 0;
@@ -17,7 +18,7 @@
 //       }
 //     }
 //     if (count > 0) {
-//       let b = { caracter: str[i], counts: count };
+//       b = { caracter: str[i], counts: count };
 //       saveCaractersandCounts.push(b);
 //     }
 //   }
@@ -25,10 +26,21 @@
 //     return b.counts - a.counts;
 //   });
 
+//   let brojIspisa = 0
+
+//   if(saveCaractersandCounts.length > 5)
+//     brojIspisa = 5
+//   else 
+//     brojIspisa = saveCaractersandCounts.length
+
 //   console.log(saveCaractersandCounts.slice(0, 5));
+
+//   for(let i = 0; i < brojIspisa; i++) {
+//     console.log(`${saveCaractersandCounts[i].caracter}: ${saveCaractersandCounts[i].counts}`);
+//   }
 // }
 
-// let test = "gfhghellolllaaassssffaffaa";
+// let test = "";
 // printCount(test);
 
 // Primer ispisa za string xxxyyoopc
