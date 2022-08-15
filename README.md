@@ -137,3 +137,17 @@ hovered. Na klik dugmeta izmeniti boju pozadine elementa sa klasom my-cnt na ora
 <div class="my-cnt">
  <button class="my-btn">
 </div>
+
+#Domaci_7
+
+1. Napisati skriptu koja racuna stepen broja. (U jedan se input unosi osnova, u drugi stepen. U trecem inputu se javlja resenje klikom na dugme)
+2. Izracunati faktorijel broja. (U jedan input unosimo broj, u drugom se javlja resenje klikom na dugme)
+3. Proveriti klikom na dugme da li uneti username postoji u bazi podataka.(u nizu) Ukoliko postoji, border inputa treba da postane crven, a ukoliko ne postoji, border postaje zelen. (U input se unosi user, taj se input boji)
+4. Tekst iz paragrafa je potrebno refaktorisati tako da posle svake tacke treba da se nalazi razmak. Primer: Danas je lep dan.Idemo da setamo. => Danas je lep dan. Idemo da setamo.
+5. Napisati kod koji iz inputa kupi broj i ispisuje broj sa ciframa u obrnutom redosledu u drugom inputu kao resenje.(Koristiti dugme) Primer: 1234 => 4321
+6. Napraviti par korisnika kao objekte u nizu. Dodati polja po izboru. Zatim ih lepo ispisati na stranici u nekom divu. (potruditi se malo oko stilizovanja)
+7. Napisati zadatak koji racuna cenu pizze prema unosu precnika iste. Cena pizze je dinar po kvadratnom centimetru. (Potrebno je imati input za precnik pizze i dugme za vracanje cene u drugom inputu)
+8. Korisnike iz 7. zadatka koristiti i ispisati samo one cije ime pocinje na slovo koje se zada u inputu. (Moze se koristiti dugme ili putem Entera, kako god je lakse)
+9. Napisati skriptu koja pravi x paragrafa. Svaki paran paragraf ima 30 reci lorem ipsum, a svaki treci ima zelenu boju pozadine.
+10. Napraviti igru kamen-papir-makaze u jednu pobedu. (postoji jedan input za unos zeljene opcije, u paragrafu ispod se na klik dugmeta ispisuje pobednik, a u konzoli se ispisuje sta je racunar odabrao. 
+    Za opciju koju racunar treba da dobije potrebno je koristiti random())
