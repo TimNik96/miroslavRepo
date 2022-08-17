@@ -21,6 +21,8 @@ https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desk
 
 https://animista.net/play/basic/rotate-90/rotate-90-horizontal-fwd
 
+https://swiperjs.com/demos
+
 #Domaci_1
 
 1. Napisati funkciju koja vraca imena iz niza koja imaju bar dva slova 'a'.
