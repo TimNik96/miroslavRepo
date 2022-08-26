@@ -22,6 +22,7 @@ https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desk
 https://animista.net/play/basic/rotate-90/rotate-90-horizontal-fwd
 
 https://swiperjs.com/demos
+https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
 
 #Domaci_1
 
