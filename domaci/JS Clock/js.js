@@ -2,14 +2,17 @@ const divCasovnik = document.querySelector(".casovnik");
 const sekunda = document.querySelector(".sekunda");
 const minuta = document.querySelector(".minuta");
 const sat = document.querySelector(".sat");
+let seconds = new Date().getSeconds();
+let brojac = seconds;
 
 const time = () => {
   let hours = new Date().getHours();
   let minutes = new Date().getMinutes();
   let seconds = new Date().getSeconds();
   let dobaDana = "AM";
+  brojac++;
+  let sec = brojac * 6;
 
-  let sec = seconds * 6;
   let min = minutes * 6;
   let hr = hours * 30 + minutes / 2;
 
