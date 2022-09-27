@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #68e0cc;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 1) 3%,
+    rgba(102, 51, 153, 1) 90%
+  );
+}
+
+form {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.5rem;
+  padding: 7% 0;
+  border: 4px solid #663399;
+  border-radius: 45px;
+  background-color: #110022;
+  animation: formAnimation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transition: all 0.7s;
+}
+
+label {
+  color: #68e0cc;
+  font-size: 0.9rem;
+}
+input {
+  background-color: #110022;
+  border: 2px solid #663399;
+  border-radius: 2rem;
+  padding: 2% 5%;
+  text-align: center;
+  color: #68e0cc;
+  transition: all 0.4s linear;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0px 0px 30px 10px #663399a1;
+}
+#username,
+#password {
+  width: 70%;
+}
+#formName {
+  font-size: 1.5rem;
+}
+#fyp {
+  font-size: 0.7rem;
+  border-bottom: 1px solid #68e0cc00;
+  padding: 1%;
+  transition: all 0.3s linear;
+}
+#fyp:hover {
+  border-bottom: 1px solid #663399;
+}
+#submit {
+  padding: 2% 10%;
+  color: #68e0cc;
+  filter: drop-shadow(0px 0px 10px #663399a1);
+  margin-top: 1%;
+  transition: all 0.4s ease-in-out;
+}
+#submit:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 10px #68e0cc);
+  color: #663399;
+}
+#register {
+  margin-top: 3%;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #68e0cc00;
+  padding: 1%;
+  transition: all 0.3s linear;
+}
+#register:hover {
+  border-bottom: 1px solid #663399;
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes formAnimation {
+  0% {
+    filter: drop-shadow(0 0 0px #68e0cc);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #68e0cc);
+  }
+  100% {
+    filter: drop-shadow(0 0 0px #68e0cc);
+  }
+}
+@media screen and (min-width: 600px) {
+  form {
+    width: 70%;
+    padding: 4% 0;
+  }
+  label {
+    font-size: 1rem;
+  }
+  input {
+    padding: 2% 5%;
+  }
+  #formName {
+    font-size: 1.7rem;
+  }
+  #username,
+  #password {
+    width: 65%;
+  }
+  #fyp {
+    font-size: 0.8rem;
+  }
+  #register {
+    margin-top: 0;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  form {
+    width: 50%;
+    padding: 4% 0;
+    border-radius: 65px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  form {
+    border-radius: 90px;
+  }
+  label {
+    font-size: 1.3rem;
+  }
+  #formName {
+    font-size: 2rem;
+  }
+  #username,
+  #password {
+    width: 60%;
+    font-size: 1.3rem;
+  }
+  #fyp {
+    font-size: 1rem;
+  }
+  #register {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  form {
+    width: 35%;
+    padding: 5% 0;
+  }
+  #formName {
+    margin-bottom: 3%;
+  }
+}
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  body {
+    height: initial;
+    padding: 5% 0%;
+  }
+
+  form {
+    padding: 3% 0%;
+    row-gap: 1.2rem;
+  }
+}

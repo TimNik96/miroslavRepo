@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/register.css" />
+    <script type="module" src="../js/register.js" defer></script>
+  </head>
+
+  <body>
+    <form action="" method="">
+      <h1 id="formName">REGISTER</h1>
+      <div class="info">
+        <div class="left">
+          <label for="firstName">FIRST NAME</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            class="sirinaInputa"
+            required
+          />
+
+          <label for="lastName">LAST NAME</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            class="sirinaInputa"
+            required
+          />
+
+          <label for="dateOfBirth">DATE OF BIRTH</label>
+          <input
+            type="date"
+            name="dateOfBirth"
+            id="dateOfBirth"
+            class="sirinaInputa"
+            required
+          />
+
+          <label for="phone">PHONE NUMBER</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="06XXXXXXXX"
+            class="sirinaInputa"
+            required
+          />
+        </div>
+        <div class="right">
+          <label for="username">USERNAME</label>
+          <input
+            type="text"
+            name="username"
+            class="sirinaInputa"
+            id="username"
+            required
+          />
+          <div class="exists empty"></div>
+
+          <label for="email">EMAIL</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="sirinaInputa"
+            required
+          />
+
+          <label for="password">PASSWORD</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="sirinaInputa"
+            required
+          />
+
+          <label for="confirmPassword">CONFIRM PASSWORD</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            class="sirinaInputa"
+            required
+          />
+        </div>
+      </div>
+      <input type="submit" value="REGISTER" id="register" />
+    </form>
+  </body>
+</html>
