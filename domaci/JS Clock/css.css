@@ -40,59 +40,86 @@ body {
   backdrop-filter: blur(1px);
   border: 2px solid rgba(1, 255, 242, 0.5);
 }
-.brojevi {
-  width: 480px;
-  font-size: 2.5em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  top: 45%;
-  left: 5px;
+.krug .broj {
+  --rotation: 0;
+  font-size: 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
 }
-.brojevi12i6 {
-  transform: rotate(90deg);
+.krug .broj1 {
+  --rotation: 30deg;
 }
-.brojevi12i6 > div {
+.broj1 > div {
+  transform: rotate(-30deg);
+}
+.krug .broj2 {
+  --rotation: 60deg;
+}
+.broj2 > div {
+  transform: rotate(-60deg);
+}
+.krug .broj3 {
+  --rotation: 90deg;
+}
+.broj3 > div {
   transform: rotate(-90deg);
 }
-.brojevi1i7 {
-  top: 35%;
-  left: 5px;
-  transform: rotate(120deg);
+.krug .broj4 {
+  --rotation: 120deg;
 }
-.brojevi1i7 > div {
+.broj4 > div {
   transform: rotate(-120deg);
 }
-.brojevi2i8 {
-  top: 25%;
-  left: 5px;
-  transform: rotate(150deg);
+.krug .broj5 {
+  --rotation: 150deg;
 }
-.brojevi2i8 > div {
+.broj5 > div {
   transform: rotate(-150deg);
 }
-.brojevi3i9 {
-  top: 15%;
-  left: 5px;
+.krug .broj6 {
+  --rotation: 180deg;
 }
-.brojevi4i10 {
-  top: 5%;
-  left: 5px;
-  transform: rotate(210deg);
+.broj6 > div {
+  transform: rotate(-180deg);
 }
-.brojevi4i10 > div {
+.krug .broj7 {
+  --rotation: 210deg;
+}
+.broj7 > div {
   transform: rotate(-210deg);
 }
-
-.brojevi5i11 {
-  top: -3%;
-  left: 5px;
-  transform: rotate(240deg);
+.krug .broj8 {
+  --rotation: 240deg;
 }
-
-.brojevi5i11 > div {
+.broj8 > div {
   transform: rotate(-240deg);
+}
+.krug .broj9 {
+  --rotation: 270deg;
+}
+.broj9 > div {
+  transform: rotate(-270deg);
+}
+.krug .broj10 {
+  --rotation: 300deg;
+}
+.broj10 > div {
+  transform: rotate(-300deg);
+}
+.krug .broj11 {
+  --rotation: 330deg;
+}
+.broj11 > div {
+  transform: rotate(-330deg);
+}
+.krug .broj12 {
+  --rotation: 360deg;
+}
+.broj12 > div {
+  transform: rotate(-360deg);
 }
 
 .sekunda {
@@ -126,7 +153,6 @@ body {
   bottom: 50%;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-
   transform-origin: 50% 100%;
 }
 .casovnik {
