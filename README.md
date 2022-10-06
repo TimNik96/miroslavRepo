@@ -22,6 +22,7 @@ https://nicepage.com/website-design/preview/mountain-adventure-19154?device=desk
 https://animista.net/play/basic/rotate-90/rotate-90-horizontal-fwd
 
 https://swiperjs.com/demos
+https://michalsnik.github.io/aos/
 https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
 
 https://www.json.org/json-en.html
@@ -30,6 +31,8 @@ https://www.xenonstack.com/insights/local-vs-session-storage-vs-cookie
 https://michalsnik.github.io/aos/
 
 https://flaviocopes.com/urlsearchparams/
+
+https://www.svgviewer.dev/
 
 #Domaci_1
 
