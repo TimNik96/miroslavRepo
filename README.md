@@ -1,5 +1,36 @@
 #Handy_things
 
+Git commands
+
+git clone URL (copy: SHIFT + INSERT)
+git init
+git config --global user.name "name" 
+git config --global user.email "email"
+git config user.name "name"
+git config user.email "email"
+git config user.name
+git config user.email
+git status
+git add imeFajla
+git add .
+git log
+git commit -m "message"
+git push
+git pull (git fetch & git merge)
+git branch
+git checkout commitID
+
+Terminal commands
+
+touch imeFajla
+mkdir imeFoldrea
+cd
+cd ..
+rm imeFajla
+rm -r imeFoldera
+ls
+ls -a (hidden folders and files)
+
 sass json settings 
 
 "liveSassCompile.settings.formats": [
@@ -33,6 +64,10 @@ https://michalsnik.github.io/aos/
 https://flaviocopes.com/urlsearchparams/
 
 https://www.svgviewer.dev/
+
+https://www.webprogramiranje.org/
+
+https://radmiladrakulic.wordpress.com/2017/09/27/osnovni-principi-objektno-orijentisanog-programiranja/
 
 #Domaci_1
 
