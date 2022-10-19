@@ -31,6 +31,13 @@ rm -r imeFoldera
 ls
 ls -a (hidden folders and files)
 
+NPM commands
+
+npm -v
+npm install
+npm start
+npm install axios
+
 sass json settings 
 
 "liveSassCompile.settings.formats": [
@@ -68,6 +75,10 @@ https://www.svgviewer.dev/
 https://www.webprogramiranje.org/
 
 https://radmiladrakulic.wordpress.com/2017/09/27/osnovni-principi-objektno-orijentisanog-programiranja/
+
+https://reqres.in/
+https://www.postman.com/downloads/
+https://www.postman.com/planetary-meteor-85425/workspace/new-team-workspace/request/create?requestId=7f2de05a-8cbd-417e-b146-f47f2bb87063 (then change to My Workspace)
 
 #Domaci_1
 
