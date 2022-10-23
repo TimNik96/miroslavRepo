@@ -1,0 +1,60 @@
+/* loader */
+
+.loader {
+  height: 200px;
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.loader img {
+  width: 100%;
+  height: 100%;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+  animation: loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+.iks {
+  position: absolute;
+  top: 45%;
+  left: 39%;
+  width: 25px;
+  height: 80px;
+  background-color: #005288;
+  z-index: 10;
+  rotate: -45deg;
+  clip-path: polygon(0 5%, 100% 12%, 100% 100%, 0 70%);
+}
+.iksTop {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  width: 25px;
+  height: 50px;
+  background-color: #005288;
+  z-index: 10;
+  rotate: -230deg;
+  clip-path: polygon(0 1%, 100% 25%, 100% 100%, 0 45%);
+}
+/* end of loader */
+@keyframes loading {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
