@@ -210,3 +210,7 @@ hovered. Na klik dugmeta izmeniti boju pozadine elementa sa klasom my-cnt na ora
 9. Napisati skriptu koja pravi x paragrafa. Svaki paran paragraf ima 30 reci lorem ipsum, a svaki treci ima zelenu boju pozadine.
 10. Napraviti igru kamen-papir-makaze u jednu pobedu. (postoji jedan input za unos zeljene opcije, u paragrafu ispod se na klik dugmeta ispisuje pobednik, a u konzoli se ispisuje sta je racunar odabrao. 
     Za opciju koju racunar treba da dobije potrebno je koristiti random())
+
+#|Domaci_8
+
+http://itoiptestapp.x10.mx/
