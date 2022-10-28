@@ -1,4 +1,4 @@
-const Launch = (launch, index) => {
+const Launch = (launch, index = 0) => {
     const divLaunch = document.createElement('div')
     divLaunch.classList.add('launch')
     divLaunch.classList.add('col-3')
