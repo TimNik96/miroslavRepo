@@ -37,6 +37,14 @@ npm -v
 npm install
 npm start
 npm install axios
+npm run build
+
+FILEZILLA
+
+host: ftp.url
+username: generatedUsername
+password: domainPassword
+port: 21(default ftp) || 22(default sftp)
 
 sass json settings 
 
