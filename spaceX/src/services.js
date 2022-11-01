@@ -5,5 +5,5 @@ export const getAllLaunches = () => {
 };
 
 export const getSingleLaunch = (flight_number) => {
-  return axios.get(`https://api.spacexdata.com/v3/launches/${flight_number}`)
-}
+  return axios.get(`https://api.spacexdata.com/v3/launches/${flight_number}`);
+};

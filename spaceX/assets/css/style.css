@@ -28,8 +28,8 @@ h1 {
   font-size: 1.2rem;
   background-color: #ffffff88;
   border: 2px solid #fff;
-  border-radius: 20px; 
-  transition: all .3s ease;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 .buttons-container .btn:hover {
   background-color: #0066ff88;
@@ -47,7 +47,7 @@ h1 {
   transition: all 0.7s linear;
 }
 .height_100 {
-  height: 200px;
+  height: 250px;
 }
 .animation {
   animation-name: opacity;
@@ -83,6 +83,14 @@ form select {
 form input {
   width: 240px;
   height: 42px;
+  transition: all 0.5s ease;
+}
+form input[type="text"] {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+form input:focus {
+  outline: none;
 }
 form select {
   cursor: pointer;
@@ -131,7 +139,7 @@ form select {
 }
 form .launch_id_submit,
 form .launches_per_year_submit {
-  width: 50%;
+  width: 180px;
 }
 form .launch_id_submit:hover,
 form .launches_per_year_submit:hover {
@@ -140,7 +148,32 @@ form .launches_per_year_submit:hover {
   transform: scale(1.1);
   color: #fff;
 }
+.message {
+  opacity: 0;
+  color: #dd0000;
+  font-size: 2rem;
+  background-color: #1b1b1b;
+  filter: drop-shadow(0px 0px 5px #dd0000);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2rem;
+  transition: all 0.5s ease-in-out;
+}
 
+.launchIdError {
+  opacity: 0;
+  color: #dd0000;
+  font-size: 2rem;
+  background-color: #1b1b1b;
+  filter: drop-shadow(0px 0px 5px #dd0000);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.show-message {
+  opacity: 1;
+}
 .launch {
   display: flex;
   flex-direction: column;
@@ -183,6 +216,7 @@ form .launches_per_year_submit:hover {
   height: 200px !important;
   position: relative;
   color: #f0f8ff00;
+  filter: drop-shadow(13px 5px 3px rgb(0, 0, 0));
 }
 .loader svg {
   display: block;
@@ -195,29 +229,25 @@ form .launches_per_year_submit:hover {
   transition: all 1s ease;
 }
 
-.loader:hover path {
-  will-change: filter;
-  filter: drop-shadow(14px 33px 13px #000);
-}
 .iks {
   position: absolute;
-  top: 52%;
+  top: 59%;
   left: 40%;
   width: 25px;
-  height: 82px;
+  height: 80px;
   background-color: #005288;
   z-index: 10;
   rotate: -45deg;
-  clip-path: polygon(0 5%, 100% 12%, 100% 100%, 0 70%);
+  clip-path: polygon(0% 5%, 100% 15%, 100% 100%, 0 70%);
 }
 .iksTop {
   position: absolute;
-  top: 30%;
-  left: 20%;
+  top: 35%;
+  left: 19%;
   width: 25px;
   height: 60px;
   background-color: #005288;
   z-index: 10;
-  rotate: -230deg;
+  rotate: -233deg;
   clip-path: polygon(0 1%, 100% 25%, 100% 100%, 0 45%);
 }
