@@ -88,6 +88,8 @@ https://reqres.in/
 https://www.postman.com/downloads/
 https://www.postman.com/planetary-meteor-85425/workspace/new-team-workspace/request/create?requestId=7f2de05a-8cbd-417e-b146-f47f2bb87063 (then change to My Workspace)
 
+https://rapidapi.com/api-sports/api/api-nba
+
 #Domaci_1
 
 1. Napisati funkciju koja vraca imena iz niza koja imaju bar dva slova 'a'.

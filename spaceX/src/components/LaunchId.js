@@ -1,5 +1,6 @@
 import { getSingleLaunch } from "../services";
 import Launch from "./Launch";
+import 'regenerator-runtime/runtime'
 
 const divIspis = document.querySelector(".ispis");
 
@@ -11,9 +12,9 @@ const LaunchId = () => {
   const inputSubmit = document.createElement("input");
   inputSubmit.type = "submit";
   inputSubmit.classList.add("launch_id_submit");
-  const errorMsg = document.createElement("div");
+  let errorMsg = document.createElement("div");
   errorMsg.classList.add("launchIdError");
-  errorMsg.innerText = "Please enter a number";
+  // errorMsg.innerText = "Please enter a number";
   divForm.append(errorMsg, inputText, inputSubmit);
 
   inputText.addEventListener("keyup", (e) => {
@@ -39,7 +40,7 @@ const LaunchId = () => {
     }
   });
 
-  divForm.addEventListener("submit", (event) => {
+  divForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (errorMsg.classList.contains("show-message")) return;
 
@@ -54,6 +55,18 @@ const LaunchId = () => {
     const singleLaunchInput = document.querySelector(
       '.launchIdForm input[type="text"]'
     );
+
+    // try {
+    //   const response = await getSingleLaunch(singleLaunchInput.value)
+    //   divIspis.innerHTML = "";
+    //   divIspis.appendChild(Launch(response.data));
+    // } catch (error) {
+    //   divIspis.innerHTML = "";
+    //   errorMsg.innerText = 'abc';
+    //   errorMsg.classList.add("show-message");
+    //   // inputText.style.backgroundColor = " #dd000088";
+    //   return console.log(error.response.data.error);
+    // }
 
     getSingleLaunch(singleLaunchInput.value)
       .then((response) => {
