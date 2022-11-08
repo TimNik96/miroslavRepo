@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modali</title>
+    <script type="module" src="index.js" defer></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .modal-wrapper {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: #00000000;
+            transition: background-color .2s ease;
+        }
+
+        /* .show {
+            display: flex;
+            z-index: 100;
+            background-color: #00000088;
+        } */
+
+        .modal {
+            width: 600px;
+            background-color: #fff;
+            border-radius: 20px;
+            border: 1px solid black;
+            opacity: 0;
+            transition: all .2s ease;
+        }
+
+        .modal header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal header h3 {
+            margin: 0 1rem;
+        }
+
+        .close {
+            width: 10px;
+            padding: 1rem;
+            border-top-right-radius: 20px;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        .close:hover {
+            background-color: #f00;
+        }
+
+        .modal main {
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 1rem;
+        }
+
+        .modal main input {
+            text-align: center;
+            padding: .5rem;
+            border-radius: 10px;
+        }
+
+        .errorMsg {
+            color: #f00;
+            transition: all .2s ease;
+        }
+
+        .modal footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: .5rem;
+            padding: 1rem 1rem;
+        }
+
+        footer button {
+            padding: .5rem 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="activate">Aktiviraj modal</button>
+    <div class="modal-wrapper">
+        <div class="modal">
+            <header>
+                <h3>
+                    Single Launch
+                </h3>
+                <div class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>
+                </div>
+            </header>
+            <main>
+                <label for="singleLaunch">Enter launch number:</label>
+                <input type="text">
+                <p class="errorMsg"></p>
+            </main>
+            <footer>
+                <button>Send</button>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
