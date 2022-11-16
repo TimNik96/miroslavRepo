@@ -8,8 +8,13 @@ const Launch = (launch) => {
   const pRocketName = document.createElement("p");
   pRocketName.textContent = launch.rocket.rocket_name;
 
+  const convertToDate = (str) => {
+    let Launchdate = str.substring(0, 10);
+    return Launchdate;
+  };
+
   const pLaunchYear = document.createElement("p");
-  pLaunchYear.textContent = launch.launch_year;
+  pLaunchYear.textContent = convertToDate(launch.launch_date_utc);
 
   const divDetails = document.createElement("div");
   divDetails.classList.add("launch-details");

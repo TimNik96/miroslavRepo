@@ -19,7 +19,7 @@
           <h2>Space</h2>
           <li id="all-launches">All Launches</li>
           <li>Single Launch</li>
-          <li>Launche year</li>
+          <li>Launch year</li>
         </ul>
         <ul>
           <h2>Ships</h2>
@@ -30,21 +30,42 @@
       </nav>
       <header>
         <form action="" method="get">
-          <div class="input_wrapper">
-            <input type="text" />
+          <div class="input-wrapper">
+            <input type="text" id="input-search" maxlength="20" />
             <input type="submit" value="search" />
           </div>
 
           <!-- definisati search polja primer mesec trazi po mesecu launches -->
-          <div class="select_wrapper">
+          <div class="select-wrapper">
             <label for="sort">Sort by:</label>
             <select name="sort" id="sort">
-              <option value="">date newest</option>
-              <option value="">date oldest</option>
+              <option value="default" selected disabled>Chose...</option>
+              <option value="date-newest">date newest</option>
+              <option value="date-oldest">date oldest</option>
             </select>
           </div>
         </form>
-        <div class="filter">filteri</div>
+        <div class="filters">
+          Select a Filter to search by:
+          <div class="filterBtn">
+            <input type="radio" id="month" name="filter" checked /><label
+              for="month"
+              >Month</label
+            >
+          </div>
+          <div class="filterBtn">
+            <input type="radio" id="details" name="filter" /><label
+              for="details"
+              >Details</label
+            >
+          </div>
+          <div class="filterBtn">
+            <input type="radio" id="rocket-name" name="filter" /><label
+              for="rocket-name"
+              >Rocket Name</label
+            >
+          </div>
+        </div>
       </header>
       <div class="ispis">
         <!-- <div class="loader">
