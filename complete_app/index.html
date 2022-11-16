@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
-   
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <nav>
-            <ul>
-                <h2>Space</h2>
-                <li>All Launches</li>
-                <li>Single Launch</li>
-                <li>Launche year</li>
-            </ul>
-            <ul>
-                <h2>Ships</h2>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
-        <header>
-            <form action="" method="get">
-                <input type="text">
-                <input type="submit" value="search">
-                <!-- definisati search polja primer mesec trazi po mesecu launches -->
-                <select name="" id="">
-                    <option value="">sdfg</option>
-                </select>
-            </form>
-            <div class="filter">filteri</div>
-        </header>
-        <div class="ispis"></div>
-    </main>
-    
-</body>
+      <nav>
+        <div class="logo-wrapper">
+          <img src="./assets/images/SpaceX-Logo.wine.svg" alt="" />
+        </div>
+        <ul>
+          <h2>Space</h2>
+          <li id="all-launches">All Launches</li>
+          <li>Single Launch</li>
+          <li>Launche year</li>
+        </ul>
+        <ul>
+          <h2>Ships</h2>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+      <header>
+        <form action="" method="get">
+          <div class="input_wrapper">
+            <input type="text" />
+            <input type="submit" value="search" />
+          </div>
 
+          <!-- definisati search polja primer mesec trazi po mesecu launches -->
+          <div class="select_wrapper">
+            <label for="sort">Sort by:</label>
+            <select name="sort" id="sort">
+              <option value="">date newest</option>
+              <option value="">date oldest</option>
+            </select>
+          </div>
+        </form>
+        <div class="filter">filteri</div>
+      </header>
+      <div class="ispis">
+        <!-- <div class="loader">
+          <div class="rocket">
+            <img src="../assets/images/rocket-svgrepo-com.svg" alt="" />
+          </div>
+        </div> -->
+      </div>
+    </main>
+  </body>
 </html>
