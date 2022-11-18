@@ -21,10 +21,14 @@ const Launch = (launch) => {
   const h3Details = document.createElement("h3");
   h3Details.textContent = "Details";
   const pDetails = document.createElement("p");
-  pDetails.textContent = launch.details;
-  if (pDetails.textContent.length < 2) {
+  
+  if (typeof launch.details==='string') {
+     pDetails.textContent = launch.details;
+  }else{
     pDetails.textContent = "No details for this mission";
   }
+ 
+ 
   h3Details.addEventListener("click", (e) => {
     if (divDetails.style.height == "100%") {
       divDetails.style.height = "0%";

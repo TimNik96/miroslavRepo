@@ -13,15 +13,20 @@ const sortBy = document.querySelector("#sort");
 
 const loader = Loader();
 
+  let currentFilterContent = [];
+let newCurrentFilter = [];
+
 const reset = () => {
   inputSearch.value = "";
   sortBy.value = "default";
+  currentFilterContent = [];
+  newCurrentFilter = [];
+
 };
 
-let currentFilterContent = [];
-let newCurrentFilter = [];
 
-allLaunchesBtn.addEventListener("click", async (e) => {
+
+allLaunchesBtn.addEventListener("click",(e) => {
   allLaunchesBtn.style.backgroundColor = "#8332ac";
   divIspis.innerHTML = "";
   reset();
@@ -30,21 +35,20 @@ allLaunchesBtn.addEventListener("click", async (e) => {
 
   getAllLaunches().then((response) => {
     divIspis.innerHTML = "";
-    let allLaunches = [];
-    allLaunches = response.data.filter(
+    
+    currentFilterContent= response.data.filter(
       (launch) => launch.links.mission_patch !== null
     );
-
-    allLaunches.forEach((l) => {
-      divIspis.appendChild(Launch(l));
+    currentFilterContent.forEach((item) => {
+      divIspis.appendChild(Launch(item));
     });
-    currentFilterContent = allLaunches;
+    
   });
 
   // Uncaught ReferenceError: regeneratorRuntime is not defined
 
   // try {
-  //   let response = await getAllLaunches();
+  //   const response = await getAllLaunches();
   //   let allLaunches = [];
   //   allLaunches = response.data.filter(
   //     (launch) => launch.links.mission_patch !== null
@@ -61,33 +65,33 @@ allLaunchesBtn.addEventListener("click", async (e) => {
 
 sortBy.addEventListener("click", (e) => {
   if (newCurrentFilter.length < 1) {
-    if (sortBy.value == "date-oldest") {
+    if (sortBy.value === "date-oldest") {
       currentFilterContent.sort((a, b) => a.flight_number - b.flight_number);
       divIspis.innerHTML = "";
-      currentFilterContent.forEach((l) => {
-        divIspis.appendChild(Launch(l));
+      currentFilterContent.forEach((item) => {
+        divIspis.appendChild(Launch(item));
       });
     }
-    if (sortBy.value == "date-newest") {
+    if (sortBy.value === "date-newest") {
       currentFilterContent.sort((a, b) => b.flight_number - a.flight_number);
       divIspis.innerHTML = "";
-      currentFilterContent.forEach((l) => {
-        divIspis.appendChild(Launch(l));
+      currentFilterContent.forEach((item) => {
+        divIspis.appendChild(Launch(item));
       });
     }
   } else {
-    if (sortBy.value == "date-oldest") {
+    if (sortBy.value === "date-oldest") {
       newCurrentFilter.sort((a, b) => a.flight_number - b.flight_number);
       divIspis.innerHTML = "";
-      newCurrentFilter.forEach((l) => {
-        divIspis.appendChild(Launch(l));
+      newCurrentFilter.forEach((item) => {
+        divIspis.appendChild(Launch(item));
       });
     }
-    if (sortBy.value == "date-newest") {
+    if (sortBy.value === "date-newest") {
       newCurrentFilter.sort((a, b) => b.flight_number - a.flight_number);
       divIspis.innerHTML = "";
-      newCurrentFilter.forEach((l) => {
-        divIspis.appendChild(Launch(l));
+      newCurrentFilter.forEach((item) => {
+        divIspis.appendChild(Launch(item));
       });
     }
   }

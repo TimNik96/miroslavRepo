@@ -123,13 +123,14 @@ nav ul h2 {
 }
 nav ul li {
   list-style: none;
-  padding: 0.3rem;
-  margin-left: 1rem;
+  padding: 0.3rem ;
+  padding-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   border-radius: 10px;
   transition: all 0.5s ease;
-  margin: 0.3rem;
+  
 }
 nav ul li:hover {
   background-color: var(--colorHover);
@@ -137,7 +138,7 @@ nav ul li:hover {
 
 .ispis {
   grid-area: ispis;
-  padding: 1rem;
+  padding: 2rem 1rem;
   overflow-y: scroll;
   display: flex;
   gap: 1rem;
@@ -193,6 +194,7 @@ nav ul li:hover {
   border-radius: 10px;
   text-align: center;
   height: 0;
+  width: 200px;
   overflow-y: hidden;
   transition: all 0.4s ease-in-out;
 }
