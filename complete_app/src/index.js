@@ -21,7 +21,7 @@ const reset = () => {
 let currentFilterContent = [];
 let newCurrentFilter = [];
 
-allLaunchesBtn.addEventListener("click", (e) => {
+allLaunchesBtn.addEventListener("click", async (e) => {
   allLaunchesBtn.style.backgroundColor = "#8332ac";
   divIspis.innerHTML = "";
   reset();
@@ -40,6 +40,23 @@ allLaunchesBtn.addEventListener("click", (e) => {
     });
     currentFilterContent = allLaunches;
   });
+
+  // Uncaught ReferenceError: regeneratorRuntime is not defined
+
+  // try {
+  //   let response = await getAllLaunches();
+  //   let allLaunches = [];
+  //   allLaunches = response.data.filter(
+  //     (launch) => launch.links.mission_patch !== null
+  //   );
+
+  //   allLaunches.forEach((l) => {
+  //     divIspis.appendChild(Launch(l));
+  //   });
+  //   currentFilterContent = allLaunches;
+  // } catch (error) {
+  //   console.log(error.response.data.error);
+  // }
 });
 
 sortBy.addEventListener("click", (e) => {
