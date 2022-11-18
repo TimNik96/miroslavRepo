@@ -12,6 +12,9 @@
   --color5: #c2e7d9;
   --colorHover: #8332ac;
 }
+body {
+  overflow-y: hidden;
+}
 
 main {
   color: rgb(255, 255, 255);
@@ -64,6 +67,7 @@ header form .input-wrapper input[type="submit"] {
   border-radius: 10px;
   padding: 0.5rem 1rem;
   text-align: center;
+
   transition: all 0.5s ease;
 }
 header form .input-wrapper input[type="submit"]:hover {
@@ -76,12 +80,16 @@ header form .input-wrapper .error {
   padding-left: 20px;
 }
 header .filters {
-  border: 1px solid rgb(59, 59, 59);
+  border: 1px solid var(--colorHover);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+header .filters h4 {
+  margin-bottom: 0.5rem;
 }
 header .filters .filterBtn {
   display: flex;
@@ -111,7 +119,7 @@ nav ul {
   margin-top: 1rem;
 }
 nav ul h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 nav ul li {
   list-style: none;
@@ -121,7 +129,7 @@ nav ul li {
   text-align: center;
   border-radius: 10px;
   transition: all 0.5s ease;
-  margin: 0.1rem;
+  margin: 0.3rem;
 }
 nav ul li:hover {
   background-color: var(--colorHover);
@@ -130,11 +138,12 @@ nav ul li:hover {
 .ispis {
   grid-area: ispis;
   padding: 1rem;
-  overflow: scroll;
+  overflow-y: scroll;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  box-shadow: inset 5px 9px 14px black;
   background-color: var(--color3);
 }
 .launch {
