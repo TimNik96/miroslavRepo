@@ -1,3 +1,4 @@
+import Funkcije from "./Functions";
 const Launch = (launch) => {
   const divLaunch = document.createElement("div");
   divLaunch.classList.add("launch");
@@ -9,14 +10,8 @@ const Launch = (launch) => {
   pRocketName.innerHTML = `<span>Rocket: </span>${launch.rocket.rocket_name}`;
   const pMissionName = document.createElement("p");
   pMissionName.innerHTML = `<span>Mission: </span>${launch.mission_name}`;
-
-  const convertToDate = (str) => {
-    let Launchdate = str.substring(0, 10);
-    return Launchdate;
-  };
-
   const pLaunchYear = document.createElement("p");
-  pLaunchYear.innerHTML = `<span>Date: </span>${convertToDate(
+  pLaunchYear.innerHTML = `<span>Date: </span>${Funkcije.convertToDate(
     launch.launch_date_utc
   )}`;
 

@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Sedgwick+Ave+Display&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>Document</title>
+    <title>Space X App</title>
   </head>
 
   <body>
@@ -18,8 +24,8 @@
         <ul>
           <h2>Space</h2>
           <li id="all-launches">All Launches</li>
-          <li>Single Launch</li>
-          <li>Launch year</li>
+          <li id="single-launch">Single Launch</li>
+          <li id="launch-year">Launch year</li>
         </ul>
         <ul>
           <h2>Ships</h2>
@@ -35,7 +41,6 @@
             <input type="submit" value="search" />
           </div>
 
-          <!-- definisati search polja primer mesec trazi po mesecu launches -->
           <div class="select-wrapper">
             <label for="sort">Sort by:</label>
             <select name="sort" id="sort">
@@ -77,16 +82,26 @@
       </div>
     </main>
 
-    <div class="modal">
-      <header>
-        <h3>title</h3>
-        <div class="close">iks</div>
-      </header>
-      <main>
-        <label for="singleLaunch">input</label>
-        <input type="text" />
-      </main>
-      <footer><button>Send</button></footer>
-    </div>
+    <!-- <div id="modal-background">
+      <div id="modal">
+        <div id="modal-header">
+          <h3>Single launch</h3>
+          <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path
+                d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div id="modal-main">
+          <label for="singleLaunch"
+            >Please enter a single launch id number</label
+          >
+          <input type="number" id="singleLaunch" />
+        </div>
+        <div id="modal-footer"><button>Send</button></div>
+      </div>
+    </div> -->
   </body>
 </html>

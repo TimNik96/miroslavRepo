@@ -11,6 +11,13 @@
   --color4: #a6cfd5;
   --color5: #c2e7d9;
   --colorHover: #8332ac;
+
+  --fontOpenSans: "Open Sans", sans-serif;
+  --fontPoppins: "Poppins", sans-serif;
+  --fontRoboto: "Roboto", sans-serif;
+}
+html {
+  font-family: var(--fontPoppins);
 }
 body {
   overflow-y: hidden;
@@ -58,40 +65,44 @@ header form select {
   padding: 0.2rem;
 }
 
-header form .input-wrapper input[type="text"] {
+header form .input-wrapper input[type="text"],
+#modal-main input {
   border: 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   background-color: transparent;
   background-color: #263f8b52;
   border-bottom: 2px solid white;
-
   padding: 0.5rem 1rem;
   text-align: center;
   font-size: 1.1rem;
   color: white;
+  transition: all 0.5s ease-in-out;
 }
-header form .input-wrapper input[type="text"]:focus {
+header form .input-wrapper input[type="text"]:focus,
+#modal-main input:focus {
   background-color: #263f8b52;
 
   outline: none;
   filter: drop-shadow(0 0 20px var(--colorHover));
 }
-header form .input-wrapper input[type="submit"] {
+header form .input-wrapper input[type="submit"],
+#modal-footer button {
   border-radius: 10px;
   padding: 0.5rem 1rem;
   text-align: center;
   border: 0;
   margin-left: 5px;
-
   transition: all 0.5s ease;
 }
-header form .input-wrapper input[type="submit"]:hover {
+header form .input-wrapper input[type="submit"]:hover,
+#modal-footer button:hover {
   background-color: var(--colorHover);
   color: white;
   cursor: pointer;
 }
-header form .input-wrapper input[type="submit"]:active {
+header form .input-wrapper input[type="submit"]:active,
+#modal-footer button:active {
   background-color: var(--color1);
   color: white;
   scale: 0.95;
@@ -105,6 +116,10 @@ header .filters {
   justify-content: space-evenly;
   padding: 0.5rem;
   border-radius: 1rem;
+  transition: all 1s ease-in-out;
+  /* opacity: 0;
+  visibility: hidden;
+  display: none; */
 }
 header .filters h4 {
   margin-bottom: 0.5rem;
@@ -121,6 +136,7 @@ nav {
   grid-area: nav;
   padding: 2rem;
   background-color: var(--color1);
+  font-family: var(--fontOpenSans);
 
   height: 100vh;
 }
@@ -156,6 +172,9 @@ nav ul li:hover {
   background-color: var(--colorHover);
 }
 
+.clickedBtn {
+  background-color: #8332ac;
+}
 .ispis {
   grid-area: ispis;
   padding: 2rem 1rem;
@@ -193,8 +212,8 @@ nav ul li:hover {
   border-color: var(--colorHover);
 }
 .launch img {
-  width: 200px;
-  height: 200px;
+  width: 60%;
+  aspect-ratio: 4/3;
   align-self: center;
 }
 .launch p {
@@ -282,12 +301,10 @@ nav ul li:hover {
   left: 50%;
   transform: rotate(50deg);
 }
-
 @keyframes spin1 {
   0% {
     transform: rotateX(65deg) rotateZ(0deg) scale(1.1);
   }
-
   100% {
     transform: rotateX(65deg) rotateZ(360deg) scale(1.1);
   }
@@ -297,10 +314,10 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.3rem 0.8rem;
   top: 10%;
   right: -100%;
-  height: 80px;
+  /* height: 80px; */
   font-size: 2rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -310,8 +327,8 @@ nav ul li:hover {
   border-right: 10px solid red;
   color: red;
   text-transform: capitalize;
-  background-color: #ff00003b;
 
+  background-color: #ff00003b;
   /* animation: toast 4s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; */
   animation: toast 4s cubic-bezier(0.82, 0.02, 0.43, 1.06) 1;
 }
@@ -337,4 +354,123 @@ nav ul li:hover {
     right: -110%;
     opacity: 0;
   }
+}
+#modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  padding-top: 20vh;
+  transition: all 0.5s ease-in-out;
+  /* display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center; */
+}
+#modal {
+  border-radius: 1rem;
+  border: 2px solid var(--colorHover);
+  background-color: #a6cfd5;
+  background: rgb(194, 231, 217);
+  background: linear-gradient(
+    120deg,
+    hsl(188, 36%, 84%) 0%,
+    hsl(188, 36%, 44%) 100%
+  );
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 40%;
+  max-width: 700px;
+  min-width: 340px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  /* height: 30vh; */
+  padding: 2rem 3rem;
+  /* transform: translateX(0); */
+  /* transition: all 1s ease-in-out; */
+  animation: modalShow 0.4s cubic-bezier(0.82, 0.02, 0.43, 1.4);
+}
+@keyframes modalShow {
+  0% {
+    transform: translateX(-200%);
+    scale: 0.5;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes modalHide {
+  0% {
+    transform: translateX(0%);
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+#modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+#modal-header h3 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--colorHover);
+  padding-bottom: 4px;
+}
+#modal .close {
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#modal .close:hover {
+  background-color: red;
+}
+#modal .close:active {
+  background-color: rgb(65, 0, 0);
+  scale: 0.9;
+}
+#modal-main {
+  display: flex;
+  flex-direction: inherit;
+  gap: 2rem;
+}
+#modal-main label {
+  font-size: 1.3rem;
+}
+#modal-main input {
+  width: 70%;
+  margin: auto;
+}
+#modal-footer button {
+  margin: 0;
+  text-transform: capitalize;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
 }
