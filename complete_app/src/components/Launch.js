@@ -1,4 +1,4 @@
-import Funkcije from "./Functions";
+import Funkcije from "../funkcije";
 const Launch = (launch) => {
   const divLaunch = document.createElement("div");
   divLaunch.classList.add("launch");

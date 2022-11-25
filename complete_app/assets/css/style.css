@@ -153,7 +153,8 @@ nav .logo-wrapper img {
   width: 100%;
 }
 nav ul {
-  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color3);
 }
 nav ul h2 {
   margin-bottom: 1rem;
@@ -212,8 +213,7 @@ nav ul li:hover {
   border-color: var(--colorHover);
 }
 .launch img {
-  width: 60%;
-  aspect-ratio: 4/3;
+  width: 50%;
   align-self: center;
 }
 .launch p {
@@ -318,7 +318,7 @@ nav ul li:hover {
   top: 10%;
   right: -100%;
   /* height: 80px; */
-  font-size: 2rem;
+  font-size: 1rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 1px solid red;
@@ -327,12 +327,17 @@ nav ul li:hover {
   border-right: 10px solid red;
   color: red;
   text-transform: capitalize;
-
   background-color: #ff00003b;
+
   /* animation: toast 4s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; */
   animation: toast 4s cubic-bezier(0.82, 0.02, 0.43, 1.06) 1;
 }
-
+.success {
+  color: green;
+  border-color: green;
+  background-color: #00ff6228;
+  box-shadow: 0 4px 30px rgba(0, 255, 0, 0.5);
+}
 @keyframes toast {
   0% {
     right: -100%;
@@ -469,8 +474,77 @@ nav ul li:hover {
 #modal-footer button {
   margin: 0;
   text-transform: capitalize;
+  font-size: 1.3rem;
+  padding: 0.5rem 2.5rem;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   appearance: none;
+}
+.nameAndSwitch {
+  display: flex;
+  justify-content: space-between;
+}
+
+#spaceBtns {
+  opacity: 1;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+#spaceBtns.switchOnOff {
+  opacity: 0;
+  height: 0;
+}
+#shipBtns.switchOnOff {
+  opacity: 0;
+  height: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 29px;
+  margin-left: 8px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(145, 31, 31);
+  transition: all 0.4s ease-in-out;
+  border-radius: 29px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 1px;
+  bottom: 2px;
+  background-color: var(--color1);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--color4);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 5px var(--colorHover);
+}
+
+input:checked + .slider:before {
+  transform: translateX(23px);
 }

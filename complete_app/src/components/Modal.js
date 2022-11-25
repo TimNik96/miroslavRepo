@@ -1,4 +1,14 @@
-import Funkcije from "./Functions";
+import Funkcije from "../funkcije";
+import { getSingleLaunch } from "../services";
+// import { getAllLaunches } from "../services";
+import Launch from "./Launch";
+import ToastNotification from "./ToastNotification";
+// import { reset } from "..";
+const divIspis = document.querySelector(".ispis");
+// const sortBy = document.querySelector("#sort");
+
+// let currentFilterContent = [];
+
 const Modal = (
   title,
   labelText,
@@ -47,13 +57,88 @@ const Modal = (
     Funkcije.closeModal();
   });
 
+  buttonModalFooter.addEventListener("click", (e) => {
+    if (document.querySelector(".toastNotification")) return;
+    if (inputModalMain.value === "") {
+      ToastNotification("Please type in something", inputModalMain);
+      return;
+    }
+    if (inputName === "singleLaunch") {
+      getSingleLaunch(inputModalMain.value)
+        .then((response) => {
+          ToastNotification(response.status);
+          divIspis.innerHTML = "";
+          Funkcije.closeModal();
+          divIspis.appendChild(Launch(response.data));
+        })
+        .catch((error) => {
+          let errorMsg;
+          if (error.response.status === 404) {
+            errorMsg = "launch id not found";
+          } else {
+            errorMsg = "there was an error";
+          }
+          ToastNotification(errorMsg, inputModalMain);
+          return;
+        });
+    }
+    //   if (inputName === "launchYear") {
+    //     getAllLaunches()
+    //       .then((response) => {
+    //         currentFilterContent = response.data.filter(
+    //           (launch) => launch.launch_year === inputModalMain.value
+    //         );
+    //         currentFilterContent = currentFilterContent.filter(
+    //           (launch) => launch.links.mission_patch !== null
+    //         );
+    //         if (currentFilterContent.length < 1) {
+    //           Funkcije.emptyValueOrError(
+    //             "No launches for this year",
+    //             inputModalMain
+    //           );
+    //           reset();
+    //           return;
+    //         }
+    //         divIspis.innerHTML = "";
+    //         Funkcije.closeModal();
+    //         currentFilterContent.forEach((item) => {
+    //           divIspis.appendChild(Launch(item));
+    //         });
+    //         console.log(currentFilterContent + " launchYear");
+    //         return;
+    //       })
+    //       .catch((error) => {
+    //         if (error.message !== null) {
+    //           Funkcije.emptyValueOrError(error.message, inputModalMain);
+    //           // reset();
+    //         }
+    //         return;
+    //       });
+    //   }
+    // });
+    // sortBy.addEventListener("click", (e) => {
+    //   if (sortBy.value === "date-oldest") {
+    //     currentFilterContent.sort((a, b) => a.flight_number - b.flight_number);
+    //     divIspis.innerHTML = "";
+    //     currentFilterContent.forEach((item) => {
+    //       divIspis.appendChild(Launch(item));
+    //     });
+    //   }
+    //   if (sortBy.value === "date-newest") {
+    //     currentFilterContent.sort((a, b) => b.flight_number - a.flight_number);
+    //     divIspis.innerHTML = "";
+    //     currentFilterContent.forEach((item) => {
+    //       divIspis.appendChild(Launch(item));
+    //     });
+    //   }
+  });
+
   divModalMain.append(labelModalMain, inputModalMain);
   divModalHeader.append(h3ModalTitle, divModalClose);
   divModalFooter.append(buttonModalFooter);
   divModal.append(divModalHeader, divModalMain, divModalFooter);
 
   divModalBackground.append(divModal);
-
   return divModalBackground;
 };
 

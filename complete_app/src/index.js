@@ -1,6 +1,6 @@
 import { getAllLaunches } from "./services";
-import { getSingleLaunch } from "./services";
-import Funkcije from "./components/Functions";
+import ToastNotification from "./components/ToastNotification";
+import Funkcije from "./funkcije";
 import Launch from "./components/Launch";
 import Loader from "./components/Loader";
 import Modal from "./components/Modal";
@@ -13,13 +13,22 @@ const headerForm = document.querySelector("header form");
 const radioBtnMonth = document.querySelector("#month");
 const radioBtnDetals = document.querySelector("#details");
 const radioBtnMissionName = document.querySelector("#mission-name");
-
 const sortBy = document.querySelector("#sort");
 const loader = Loader();
-let currentFilterContent = [];
+const spaceSwitch = document.querySelector("#spaceBtnsSwitch");
+const spaceBtns = document.querySelector("#spaceBtns");
+const shipSwitch = document.querySelector("#shipsBtnsSwitch");
+const shipBtns = document.querySelector("#shipBtns");
+spaceSwitch.addEventListener("click", (e) => {
+  spaceBtns.classList.toggle("switchOnOff");
+});
+shipSwitch.addEventListener("click", (e) => {
+  shipBtns.classList.toggle("switchOnOff");
+});
 let newCurrentFilter = [];
+let currentFilterContent = [];
 
-const reset = () => {
+export const reset = () => {
   inputSearch.value = "";
   sortBy.value = "default";
   currentFilterContent = [];
@@ -35,17 +44,18 @@ allLaunchesBtn.addEventListener("click", (e) => {
   getAllLaunches()
     .then((response) => {
       divIspis.innerHTML = "";
+      console.log(response.status);
       currentFilterContent = response.data.filter(
         (launch) => launch.links.mission_patch !== null
       );
       currentFilterContent.forEach((item) => {
         divIspis.appendChild(Launch(item));
       });
+      ToastNotification(response.status);
     })
     .catch((error) => {
       if (error.message !== null) {
-        Funkcije.emptyValueOrError(error.message, inputSearch);
-        divIspis.removeChild(loader);
+        ToastNotification(error.message, inputSearch);
 
         reset();
       }
@@ -71,48 +81,7 @@ singleLaunchBtn.addEventListener("click", (addModal) => {
       inputPlaceholder
     )
   );
-  const modalSingleLaunchButton = document.querySelector(".modalButton");
-  const modalSingleLaunchInput = document.querySelector("#modal-main input");
-  modalSingleLaunchButton.addEventListener("click", (e) => {
-    if (document.querySelector(".toastNotification")) return;
-    if (modalSingleLaunchInput.value === "") {
-      Funkcije.emptyValueOrError(
-        "Please add a Launch id",
-        modalSingleLaunchInput
-      );
-
-      return;
-    } else {
-      divIspis.append(loader);
-      getSingleLaunch(modalSingleLaunchInput.value)
-        .then((response) => {
-          reset();
-          divIspis.innerHTML = "";
-          Funkcije.closeModal();
-          divIspis.appendChild(Launch(response.data));
-        })
-        .catch((error) => {
-          let errorMsg;
-
-          if (error.response.status === 404) {
-            errorMsg = "launch id not found";
-          } else {
-            errorMsg = "there was an error";
-          }
-          Funkcije.emptyValueOrError(errorMsg, modalSingleLaunchInput);
-          divIspis.removeChild(loader);
-
-          return;
-        });
-      // try {
-      //   const response = await getSingleLaunch(modalSingleLaunchInput.value);
-      //   divIspis.innerHTML = "";
-      //   divIspis.appendChild(Launch(response.data));
-      // } catch (error) {
-      //   return console.log(error.response.data.error);
-      // }
-    }
-  });
+  reset();
 });
 launchYearBtn.addEventListener("click", (addModal) => {
   if (document.querySelector(".toastNotification")) return;
@@ -137,15 +106,10 @@ launchYearBtn.addEventListener("click", (addModal) => {
   modalLaunchYearButton.addEventListener("click", (e) => {
     if (document.querySelector(".toastNotification")) return;
     if (modalLaunchYearInput.value === "") {
-      Funkcije.emptyValueOrError(
-        "Please add a launch year",
-        modalLaunchYearInput
-      );
-
+      ToastNotification("Please add a launch year", modalLaunchYearInput);
       return;
     } else {
       reset();
-      divIspis.append(loader);
       getAllLaunches()
         .then((response) => {
           currentFilterContent = response.data.filter(
@@ -155,17 +119,14 @@ launchYearBtn.addEventListener("click", (addModal) => {
             (launch) => launch.links.mission_patch !== null
           );
           if (currentFilterContent.length < 1) {
-            Funkcije.emptyValueOrError(
+            ToastNotification(
               "No launches for this year",
               modalLaunchYearInput
             );
-
             reset();
-            divIspis.removeChild(loader);
-
             return;
           }
-
+          ToastNotification(response.status);
           divIspis.innerHTML = "";
           Funkcije.closeModal();
           currentFilterContent.forEach((item) => {
@@ -173,14 +134,11 @@ launchYearBtn.addEventListener("click", (addModal) => {
           });
         })
         .catch((error) => {
-          console.log(error.message);
           if (error.message !== null) {
-            Funkcije.emptyValueOrError(error.message, modalLaunchYearInput);
+            ToastNotification(error.message, modalLaunchYearInput);
             divIspis.removeChild(loader);
-
             reset();
           }
-
           return;
         });
     }
@@ -226,15 +184,13 @@ headerForm.addEventListener("submit", (e) => {
   if (document.querySelector(".toastNotification")) return;
 
   if (newCurrentFilter.length < 1 && currentFilterContent.length < 1) {
-    Funkcije.emptyValueOrError("No launches to filter from", inputSearch);
-
+    ToastNotification("No launches to filter from", inputSearch);
     return;
   }
   let value = inputSearch.value.trim();
   sortBy.value = "default";
   if (value === "" && radioBtnMonth.checked) {
-    Funkcije.emptyValueOrError("Please type in a month", inputSearch);
-
+    ToastNotification("Please type in a month", inputSearch);
     return;
   }
   if (radioBtnMonth.checked) {
@@ -254,8 +210,7 @@ headerForm.addEventListener("submit", (e) => {
       });
     }
     if (newFilter.length === 0 && value !== "") {
-      Funkcije.emptyValueOrError("no match found", inputSearch);
-
+      ToastNotification("no match found", inputSearch);
       return;
     }
   }
@@ -279,8 +234,7 @@ headerForm.addEventListener("submit", (e) => {
       launch.details.includes(value)
     );
     if (newCurrentFilter.length === 0) {
-      Funkcije.emptyValueOrError("no match found", inputSearch);
-
+      ToastNotification("no match found", inputSearch);
       return;
     }
     divIspis.innerHTML = "";
@@ -289,8 +243,7 @@ headerForm.addEventListener("submit", (e) => {
     });
   }
   if (value === "" && radioBtnMissionName.checked) {
-    Funkcije.emptyValueOrError("Please type in a mission name", inputSearch);
-
+    ToastNotification("Please type in a mission name", inputSearch);
     return;
   }
   if (value !== "" && radioBtnMissionName.checked) {
@@ -303,8 +256,7 @@ headerForm.addEventListener("submit", (e) => {
         divIspis.appendChild(Launch(launch));
       });
     } else {
-      Funkcije.emptyValueOrError("No matching mission name", inputSearch);
-
+      ToastNotification("No matching mission name", inputSearch);
       return;
     }
   }
