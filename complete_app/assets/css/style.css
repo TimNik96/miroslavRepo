@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 :root {
   --color1: #0d0221;
   --color2: #0f084b;
@@ -11,7 +10,6 @@
   --color4: #a6cfd5;
   --color5: #c2e7d9;
   --colorHover: #8332ac;
-
   --fontOpenSans: "Open Sans", sans-serif;
   --fontPoppins: "Poppins", sans-serif;
   --fontRoboto: "Roboto", sans-serif;
@@ -22,7 +20,6 @@ html {
 body {
   overflow-y: hidden;
 }
-
 main {
   color: rgb(255, 255, 255);
   height: 100vh;
@@ -39,18 +36,16 @@ main {
     "nav ispis ispis ispis ispis ispis"
     "nav ispis ispis ispis ispis ispis";
 }
-
 header {
   grid-area: header;
   padding: 2rem;
   background-color: var(--color2);
-
   display: flex;
   justify-content: center;
   align-items: center;
-  /* align-self: center;
-    justify-self: center; */
-  /* width: 100%; */
+}
+header .formWrapper {
+  display: flex;
 }
 header form {
   display: flex;
@@ -58,15 +53,16 @@ header form {
   gap: 0.5rem;
   margin-right: 2rem;
 }
-header form input {
+header form input,
+.loginModal input {
   padding: 0.2rem;
 }
 header form select {
   padding: 0.2rem;
 }
-
 header form .input-wrapper input[type="text"],
-#modal-main input {
+#modal-main input,
+.loginModal input {
   border: 0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -80,14 +76,16 @@ header form .input-wrapper input[type="text"],
   transition: all 0.5s ease-in-out;
 }
 header form .input-wrapper input[type="text"]:focus,
-#modal-main input:focus {
+#modal-main input:focus,
+.loginModal input:focus {
   background-color: #263f8b52;
 
   outline: none;
   filter: drop-shadow(0 0 20px var(--colorHover));
 }
 header form .input-wrapper input[type="submit"],
-#modal-footer button {
+#modal-footer button,
+.loginModal button {
   border-radius: 10px;
   padding: 0.5rem 1rem;
   text-align: center;
@@ -96,18 +94,19 @@ header form .input-wrapper input[type="submit"],
   transition: all 0.5s ease;
 }
 header form .input-wrapper input[type="submit"]:hover,
-#modal-footer button:hover {
+#modal-footer button:hover,
+.loginModal button:hover {
   background-color: var(--colorHover);
   color: white;
   cursor: pointer;
 }
 header form .input-wrapper input[type="submit"]:active,
-#modal-footer button:active {
+#modal-footer button:active,
+.loginModal button:active {
   background-color: var(--color1);
   color: white;
   scale: 0.95;
 }
-
 header .filters {
   border: 1px solid var(--colorHover);
   display: flex;
@@ -117,9 +116,6 @@ header .filters {
   padding: 0.5rem;
   border-radius: 1rem;
   transition: all 1s ease-in-out;
-  /* opacity: 0;
-  visibility: hidden;
-  display: none; */
 }
 header .filters h4 {
   margin-bottom: 0.5rem;
@@ -161,6 +157,7 @@ nav ul h2 {
 }
 nav ul li {
   list-style: none;
+  width: 70%;
   padding: 0.3rem;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
@@ -172,7 +169,6 @@ nav ul li {
 nav ul li:hover {
   background-color: var(--colorHover);
 }
-
 .clickedBtn {
   background-color: #8332ac;
 }
@@ -204,10 +200,10 @@ nav ul li:hover {
   color: black;
   border-radius: 1rem;
   overflow-y: hidden;
-
   transition: all 0.4s ease-in-out;
 }
-.launch:hover {
+.launch:hover,
+.ship:hover {
   transform: translateY(-10px);
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
   border-color: var(--colorHover);
@@ -249,17 +245,23 @@ nav ul li:hover {
   overflow-y: auto;
   transition: all 0.4s ease-in-out;
 }
-.launch .launch-details::-webkit-scrollbar {
+.launch .launch-details::-webkit-scrollbar,
+.ship ::-webkit-scrollbar,
+.ispis::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
 }
-.launch .launch-details::-webkit-scrollbar-track {
+.launch .launch-details::-webkit-scrollbar-track,
+.ship ::-webkit-scrollbar-track,
+.ispis::-webkit-scrollbar-track {
   background-color: #8332ac57;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 4px;
 }
-.launch .launch-details::-webkit-scrollbar-thumb {
+.launch .launch-details::-webkit-scrollbar-thumb,
+.ship ::-webkit-scrollbar-thumb,
+.ispis::-webkit-scrollbar-thumb {
   background-color: #8332ac;
   border-radius: 4px;
 }
@@ -268,7 +270,73 @@ nav ul li:hover {
   padding: 0.3rem;
   color: rgb(7, 7, 7);
 }
-
+.ship {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 95%;
+  height: 230px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 4px solid rgb(255, 255, 255);
+  background-color: var(--color4);
+  color: black;
+  transition: all 0.4s ease-in-out;
+}
+.ship p {
+  font-size: 1.1rem;
+}
+.ship span {
+  color: var(--color3);
+  font-size: 1rem;
+  word-wrap: unset;
+}
+.ship .img-wrapper {
+  min-width: 150px;
+  width: 200px;
+  height: 100%;
+  margin-right: 1rem;
+}
+.ship img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 1rem;
+}
+.ship .p-wrapper {
+  padding: 0 0.5rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+.ship .ship-roles,
+.ship .ship-missions {
+  padding: 0rem 1rem;
+}
+.ship .ship-roles {
+  width: 15%;
+}
+.ship .ship-missions {
+  overflow: hidden;
+  width: 30%;
+}
+.ship .ship-missions ul {
+  padding: 0 0.2rem;
+  box-shadow: inset 0px 3px 4px black;
+  background-color: var(--color5);
+  border-radius: 0.5rem;
+  list-style: none;
+  height: 90%;
+  overflow-y: auto;
+}
+.ship .ship-roles li,
+.ship .ship-missions li {
+  margin-left: 5px;
+}
 .loader {
   align-self: center;
   display: block;
@@ -317,7 +385,6 @@ nav ul li:hover {
   padding: 0.3rem 0.8rem;
   top: 10%;
   right: -100%;
-  /* height: 80px; */
   font-size: 1rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -328,8 +395,6 @@ nav ul li:hover {
   color: red;
   text-transform: capitalize;
   background-color: #ff00003b;
-
-  /* animation: toast 4s cubic-bezier(0.6, -0.28, 0.735, 0.045) both; */
   animation: toast 4s cubic-bezier(0.82, 0.02, 0.43, 1.06) 1;
 }
 .success {
@@ -360,7 +425,8 @@ nav ul li:hover {
     opacity: 0;
   }
 }
-#modal-background {
+#modal-background,
+.login-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -370,12 +436,9 @@ nav ul li:hover {
   backdrop-filter: blur(2px);
   padding-top: 20vh;
   transition: all 0.5s ease-in-out;
-  /* display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center; */
 }
-#modal {
+#modal,
+.loginModal {
   border-radius: 1rem;
   border: 2px solid var(--colorHover);
   background-color: #a6cfd5;
@@ -388,17 +451,15 @@ nav ul li:hover {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   width: 40%;
   max-width: 700px;
-  min-width: 340px;
+  min-width: 350px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
   position: relative;
-  /* height: 30vh; */
   padding: 2rem 3rem;
-  /* transform: translateX(0); */
-  /* transition: all 1s ease-in-out; */
+  color: black;
   animation: modalShow 0.4s cubic-bezier(0.82, 0.02, 0.43, 1.4);
 }
 @keyframes modalShow {
@@ -425,19 +486,23 @@ nav ul li:hover {
     opacity: 0;
   }
 }
-
 #modal-header {
   display: flex;
   align-items: center;
   justify-content: stretch;
 }
-#modal-header h3 {
+#modal-header h3,
+.loginModal h3 {
   font-size: 1.7rem;
   text-transform: capitalize;
   border-bottom: 1px solid var(--colorHover);
   padding-bottom: 4px;
 }
-#modal .close {
+.loginModal h3 {
+  color: black;
+}
+#modal .close,
+.loginModal .close {
   background-color: rgba(255, 0, 0, 0.5);
   border-radius: 50%;
   display: flex;
@@ -452,10 +517,12 @@ nav ul li:hover {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-#modal .close:hover {
+#modal .close:hover,
+.loginModal .close:hover {
   background-color: red;
 }
-#modal .close:active {
+#modal .close:active,
+.loginModal .close:active {
   background-color: rgb(65, 0, 0);
   scale: 0.9;
 }
@@ -464,18 +531,35 @@ nav ul li:hover {
   flex-direction: inherit;
   gap: 2rem;
 }
-#modal-main label {
-  font-size: 1.3rem;
+#modal-main label,
+.loginModal label {
+  font-size: 1.2rem;
 }
-#modal-main input {
+#modal-main input,
+.loginModal input {
   width: 70%;
   margin: auto;
 }
+.loginModal button {
+  width: 70%;
+  font-size: 1.1rem;
+  margin: 0;
+}
+#modal #modal-footer {
+  width: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 #modal-footer button {
   margin: 0;
+  /* margin-left: 1rem; */
   text-transform: capitalize;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 0.5rem 2.5rem;
+}
+#modal-footer button .openLoginBtn {
+  margin-left: 1rem;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -499,7 +583,6 @@ input::-webkit-inner-spin-button {
   opacity: 0;
   height: 0;
 }
-
 .switch {
   position: relative;
   display: inline-block;
@@ -507,13 +590,11 @@ input::-webkit-inner-spin-button {
   height: 29px;
   margin-left: 8px;
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -521,11 +602,10 @@ input::-webkit-inner-spin-button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(145, 31, 31);
+  background-color: var(--color4);
   transition: all 0.4s ease-in-out;
   border-radius: 29px;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -540,11 +620,98 @@ input::-webkit-inner-spin-button {
 input:checked + .slider {
   background-color: var(--color4);
 }
-
 input:focus + .slider {
-  box-shadow: 0 0 5px var(--colorHover);
+  box-shadow: 0 0 10px var(--colorHover);
 }
-
 input:checked + .slider:before {
   transform: translateX(23px);
+}
+select {
+  background: var(--color4);
+  font-size: 1rem;
+  text-transform: capitalize;
+  border: 2px solid var(--color4);
+  border-radius: 10px;
+  margin-left: 1rem;
+  color: #290838;
+}
+select:hover {
+  border: 2px solid var(--colorHover);
+  box-shadow: 0 0 10px var(--colorHover);
+}
+select:focus {
+  outline: none;
+  border: 2px solid var(--colorHover);
+}
+.loginModal {
+  gap: 1rem;
+  max-width: 550px;
+  min-width: 350px;
+}
+#loginBtn {
+  font-size: 1.2rem;
+  width: 70%;
+}
+#registerBtn {
+  font-size: 0.8rem;
+  width: 45%;
+}
+#forgotPasswordBtn {
+  font-size: 0.8rem;
+  width: 45%;
+
+  /* white-space: nowrap; */
+}
+#bottomBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+.vibrate-1 {
+  animation: vibrate-1 0.3s linear 2 both;
+}
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+#passwordLabel div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerPasswordSpan {
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--colorHover);
+  height: 0;
+  overflow: hidden;
+  line-height: 15px;
+  transition: height 0.5s ease-in-out;
+  background-color: var(--color4);
+  margin: 0.3rem;
+}
+
+#passwordLabel:hover .registerPasswordSpan {
+  height: 75px;
+}
+.addHeight {
+  height: 75px;
 }

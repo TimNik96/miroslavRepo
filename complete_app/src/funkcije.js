@@ -1,14 +1,3 @@
-const closeModal = () => {
-  const divModal = document.querySelector("#modal");
-  divModal.style.animation =
-    "modalHide 0.5s cubic-bezier(0.82, 0.02, 0.43, 1.4)";
-  divModal.style.transform = "translateX(-200%)";
-  const divModalBackground = document.querySelector("#modal-background");
-  divModalBackground.style.opacity = "0";
-  setTimeout(() => {
-    document.body.removeChild(divModalBackground);
-  }, 600);
-};
 const monthNameToNumbers = (value) => {
   let broj;
   switch (value) {
@@ -73,9 +62,7 @@ const convertToDate = (str) => {
   let Launchdate = str.substring(0, 10);
   return Launchdate;
 };
-
 const Funkcije = {
-  closeModal,
   monthNameToNumbers,
   convertToMonth,
   convertToDate,

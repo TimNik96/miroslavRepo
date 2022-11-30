@@ -44,80 +44,21 @@
             </label>
           </div>
           <div id="shipBtns">
-            <li>All Launches</li>
-            <li>Single Launch</li>
-            <li>Launch year</li>
+            <li id="all-ships">All Ships</li>
+            <li id="ship-name">Ship Name</li>
+            <li id="ship-type">Ship type</li>
           </div>
         </ul>
+        <div>
+          <ul>
+            <h2>Log out</h2>
+
+            <li id="login">Log out</li>
+          </ul>
+        </div>
       </nav>
-      <header>
-        <form action="" method="get">
-          <div class="input-wrapper">
-            <input type="text" id="input-search" maxlength="20" />
-            <input type="submit" value="search" />
-          </div>
-
-          <div class="select-wrapper">
-            <label for="sort">Sort by:</label>
-            <select name="sort" id="sort">
-              <option value="default" selected disabled>Chose...</option>
-              <option value="date-newest">date newest</option>
-              <option value="date-oldest">date oldest</option>
-            </select>
-          </div>
-        </form>
-        <div class="filters">
-          <h4>Select a Filter to search by:</h4>
-
-          <div class="filterBtn">
-            <input type="radio" id="month" name="filter" checked /><label
-              for="month"
-              >Month</label
-            >
-          </div>
-          <div class="filterBtn">
-            <input type="radio" id="details" name="filter" /><label
-              for="details"
-              >Details</label
-            >
-          </div>
-          <div class="filterBtn">
-            <input type="radio" id="mission-name" name="filter" /><label
-              for="rocket-name"
-              >Mission Name</label
-            >
-          </div>
-        </div>
-      </header>
-      <div class="ispis">
-        <!-- <div class="loader">
-          <div class="rocket">
-            <img src="../assets/images/rocket-svgrepo-com.svg" alt="" />
-          </div>
-        </div> -->
-      </div>
+      <header></header>
+      <div class="ispis"></div>
     </main>
-
-    <!-- <div id="modal-background">
-      <div id="modal">
-        <div id="modal-header">
-          <h3>Single launch</h3>
-          <div class="close">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path
-                d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
-              />
-            </svg>
-          </div>
-        </div>
-        <div id="modal-main">
-          <label for="singleLaunch"
-            >Please enter a single launch id number</label
-          >
-          <input type="number" id="singleLaunch" />
-        </div>
-        <div id="modal-footer"><button>Send</button></div>
-      </div>
-    </div> -->
   </body>
 </html>

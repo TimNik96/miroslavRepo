@@ -2,9 +2,10 @@ const ToastNotification = (msg, input = null) => {
   const divToast = document.createElement("div");
   divToast.classList.add("toastNotification");
   divToast.innerText = msg;
-
   document.body.appendChild(divToast);
-
+  if (msg.toString().includes("Welcome")) {
+    divToast.classList.add("success");
+  }
   if (msg === 200) {
     divToast.innerText = "success";
     divToast.classList.add("success");
@@ -15,12 +16,10 @@ const ToastNotification = (msg, input = null) => {
   if (input !== null) {
     input.style.borderColor = "red";
   }
-
   setTimeout(() => {
     if (input !== null) {
       input.style.borderColor = "inherit";
     }
-
     document.body.removeChild(divToast);
   }, 4010);
 };

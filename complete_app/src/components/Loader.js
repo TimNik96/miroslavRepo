@@ -5,8 +5,6 @@ const Loader = () => {
   <div class="rocket">
             <img src="../assets/images/rocket-svgrepo-com.svg" alt="" />
           </div>`;
-
   return divLoader;
 };
-
 export default Loader;
