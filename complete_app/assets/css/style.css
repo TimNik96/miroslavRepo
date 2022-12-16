@@ -46,16 +46,24 @@ header {
 }
 header .formWrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
+
 header form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-right: 2rem;
 }
 header form input,
 .loginModal input {
   padding: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 header form select {
   padding: 0.2rem;
@@ -128,13 +136,19 @@ header .filters .filterBtn {
   gap: 1rem;
   padding-left: 0.5rem;
 }
+.input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 nav {
   grid-area: nav;
   padding: 2rem;
   background-color: var(--color1);
   font-family: var(--fontOpenSans);
-
   height: 100vh;
+  min-width: 220px;
 }
 nav .logo-wrapper {
   width: 90%;
@@ -157,7 +171,7 @@ nav ul h2 {
 }
 nav ul li {
   list-style: none;
-  width: 70%;
+  width: 150px;
   padding: 0.3rem;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
@@ -165,6 +179,7 @@ nav ul li {
   text-align: left;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
+  border: 1px solid var(--colorHover);
 }
 nav ul li:hover {
   background-color: var(--colorHover);
@@ -570,7 +585,8 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
 }
 
-#spaceBtns {
+#spaceBtns,
+#shipBtns {
   opacity: 1;
   height: 100%;
   transition: all 0.5s ease;
@@ -714,4 +730,25 @@ select:focus {
 }
 .addHeight {
   height: 75px;
+}
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 90%;
+  }
+  nav {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  nav ul li {
+    width: 80%;
+    margin-left: 1rem;
+  }
+  nav .logo-wrapper {
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  nav .nameAndSwitch {
+    justify-content: center;
+    width: 100%;
+  }
 }
