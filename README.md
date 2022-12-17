@@ -90,6 +90,14 @@ https://www.postman.com/planetary-meteor-85425/workspace/new-team-workspace/requ
 
 https://rapidapi.com/api-sports/api/api-nba
 
+TYPESCRIPT
+
+https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+https://www.typescriptlang.org/download
+#install extension Material Icon
+#optional extension ESLint
+#optional extension Path Intellisense
+
 #Domaci_1
 
 1. Napisati funkciju koja vraca imena iz niza koja imaju bar dva slova 'a'.
