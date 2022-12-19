@@ -157,6 +157,27 @@ const Modal = (
         });
     }
     if (inputName === "shipName") {
+      if (inputModalMain.value === "A Shortfall of Gravitas") {
+        inputModalMain.value = "ASOG";
+      }
+      if (inputModalMain.value === "Elsbeth III") {
+        inputModalMain.value = "ELSBETH3";
+      }
+      if (inputModalMain.value === "Of Course I Still Love You") {
+        inputModalMain.value = "OCISLY";
+      }
+      if (inputModalMain.value === "Pacific Freeedom") {
+        inputModalMain.value = "PACIFICFREEDOM";
+      }
+      if (inputModalMain.value === "Pacific Warrior") {
+        inputModalMain.value = "PACIFICWARRIOR";
+      }
+      if (inputModalMain.value === "Just Read The Instructions 1") {
+        inputModalMain.value = "JRTI-1";
+      }
+      if (inputModalMain.value === "Just Read The Instructions 2") {
+        inputModalMain.value = "JRTI-2";
+      }
       getSingleShip(inputModalMain.value.replace(/ /g, "").toUpperCase())
         .then((response) => {
           ToastNotification(response.status);
@@ -168,8 +189,9 @@ const Modal = (
         })
         .catch((error) => {
           let errorMsg;
+
           if (error.request.status === 404) {
-            errorMsg = "launch id not found";
+            errorMsg = "ship name not found";
           } else {
             errorMsg = "there was an error";
           }
@@ -186,6 +208,11 @@ const Modal = (
               ship.ship_type.toLowerCase() ===
               inputModalMain.value.toLowerCase()
           );
+          if (currentFilterContent.length < 1) {
+            const errorMsg = "not found";
+            ToastNotification(errorMsg, inputModalMain);
+            return;
+          }
           currentFilterContent.forEach((item) => {
             divIspis.appendChild(Ship(item));
           });
@@ -197,13 +224,59 @@ const Modal = (
           );
         })
         .catch((error) => {
-          if (error.message !== null) {
-            ToastNotification(error.message, inputSearch);
+          let errorMsg;
+          if (error.request.status === 404) {
+            errorMsg = "type not found";
+          } else {
+            errorMsg = "there was an error";
           }
+          ToastNotification(errorMsg, inputModalMain);
           return;
         });
     }
   });
+  inputModalMain.addEventListener("keyup", (e) => {
+    if (inputName !== "shipName") return;
+    if (inputModalMain.value.length < 1) return;
+
+    getAllShips()
+      .then((response) => {
+        const imena = response.data.filter(
+          (ship) =>
+            ship.ship_name
+              .toLowerCase()
+              .substring(0, inputModalMain.value.length) ===
+            inputModalMain.value.toLowerCase()
+        );
+
+        const provera = document.querySelector(".shipNamesInModal");
+        if (divModal.contains(provera)) {
+          provera.remove();
+        }
+        if (imena.length < 1) return;
+
+        const showNames = (names) => {
+          const shipIme = document.createElement("div");
+          shipIme.classList.add("shipNamesInModal");
+          names.forEach((name) => {
+            const option = document.createElement("p");
+            option.classList.add("shipNameOptions");
+            option.innerText = name.ship_name;
+            shipIme.append(option);
+            option.addEventListener("click", (e) => {
+              inputModalMain.value = option.innerText;
+            });
+          });
+          divModal.append(shipIme);
+        };
+        showNames(imena);
+      })
+      .catch((error) => {
+        console.log(error);
+        return;
+      });
+  });
+
   if (localStorage.getItem("filterContent") === null)
     localStorage.setItem("filterContent", JSON.stringify(currentFilterContent));
   if (modalBtnText2 !== "") {
@@ -219,6 +292,22 @@ const Modal = (
   divModalFooter.append(buttonModalFooter);
   divModal.append(divModalHeader, divModalMain, divModalFooter);
   divModalBackground.append(divModal);
+  if (inputName === "shipType") {
+    const types = ["tug", "cargo", "high speed craft", "barge"];
+    const shipIme = document.createElement("div");
+    shipIme.classList.add("shipNamesInModal");
+
+    types.forEach((type) => {
+      const option = document.createElement("p");
+      option.classList.add("shipNameOptions");
+      option.innerText = type;
+      shipIme.append(option);
+      option.addEventListener("click", (e) => {
+        inputModalMain.value = option.innerText;
+      });
+    });
+    divModal.append(shipIme);
+  }
   return divModalBackground;
 };
 export default Modal;

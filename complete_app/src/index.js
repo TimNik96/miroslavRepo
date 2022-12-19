@@ -176,7 +176,7 @@ window.onload = () => {
   shipTypeBtn.addEventListener("click", (addModal) => {
     if (document.querySelector(".toastNotification")) return;
     const title = "Ship Type";
-    const labelText = "Please enter a Ship Type";
+    const labelText = "Please enter a Ship Type or select from bottom";
     const inputName = "shipType";
     const inputType = "text";
     const modalBtnText = "find";

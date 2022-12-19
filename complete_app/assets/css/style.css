@@ -585,6 +585,22 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
 }
 
+.shipNamesInModal {
+  background-color: white;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.shipNameOptions {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--colorHover);
+}
+.shipNameOptions:hover {
+  background-color: var(--colorHover);
+  color: white;
+}
+
 #spaceBtns,
 #shipBtns {
   opacity: 1;
@@ -645,7 +661,7 @@ input:checked + .slider:before {
 select {
   background: var(--color4);
   font-size: 1rem;
-  text-transform: capitalize;
+  text-transform: lowercase;
   border: 2px solid var(--color4);
   border-radius: 10px;
   margin-left: 1rem;
@@ -724,13 +740,13 @@ select:focus {
   background-color: var(--color4);
   margin: 0.3rem;
 }
-
 #passwordLabel:hover .registerPasswordSpan {
   height: 75px;
 }
 .addHeight {
   height: 75px;
 }
+
 @media only screen and (max-width: 700px) {
   body {
     font-size: 90%;
