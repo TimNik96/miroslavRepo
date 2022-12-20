@@ -230,9 +230,10 @@ const SearchAndFilter = (selectOptions, filterBtns) => {
     if (newCurrentFilter === undefined) {
       newCurrentFilter = JSON.parse(localStorage.getItem("newFilterContent"));
     }
+
     if (currentFilterContent === undefined && newCurrentFilter === undefined)
       return;
-    if (newCurrentFilter === null) {
+    if (newCurrentFilter.length < 1) {
       if (select.value === "date-oldest") {
         currentFilterContent.sort((a, b) => a.flight_number - b.flight_number);
         divIspis.innerHTML = "";
