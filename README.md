@@ -33,11 +33,21 @@ ls -a (hidden folders and files)
 
 NPM commands
 
+npm init
 npm -v
 npm install
 npm start
 npm install axios
 npm run build
+npm install --save-dev lite-server ("start": "lite-server" u package.json)
+
+TYPESCRIPT
+
+tsc -init
+tsc fileName
+tsc
+tsc fileName -w
+tsc -w (--watch)
 
 FILEZILLA
 
