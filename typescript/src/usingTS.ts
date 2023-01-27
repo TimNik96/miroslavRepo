@@ -26,6 +26,16 @@
 //union type
 //literal type
 
+// advanced types
+// -intersection types
+// -type guards
+// -type casting
+// -discriminating types
+// -function overloads
+// -indexing
+// -optional chaining ?
+// -null coalescing (&& ||) ??
+
 // const inputNum1 = document.querySelector('#num1')! as HTMLInputElement
 // const inputNum2 = document.querySelector('#num2')! as HTMLInputElement
 // const button = document.querySelector('button')!
@@ -110,8 +120,137 @@
 // let num = 5
 // console.log('poz', num)
 
+// INTERSECTION
+// type MojTip = number | string | boolean
+// type MojTip2 = string | boolean
 
+// type Kombinacija = MojTip | MojTip2 
+// type Kombinacija = MojTip & MojTip2 
 
+// interface Osoba {
+//     name: string
+//     prezime: string
+//     hobi: string[]
+// }
 
+// interface Zaposleni {
+//     name: string
+//     prezime: string
+//     pozicija: string
+// }
+
+// type Osoba = {
+//     name: string
+//     prezime: string
+//     hobi: string[]
+// }
+
+// type Zaposleni = {
+//     prezime: string
+//     pozicija: string
+//     name: string
+// }
+
+// type Racunovodja = Zaposleni & Osoba
+// interface Racunovodja extends Zaposleni, Osoba
+
+// let o1: Racunovodja = {
+//     name: 'Mirko',
+//     prezime: 'Mirkovic',
+//     pozicija: 'Racunovodja',
+//     hobi: ['Skijanje']
+// }
+
+// TYPE GUARDS
+// function add(a: number | string, b: number | string) {
+//     if(typeof a === 'string' || typeof b === 'string')
+//         return a.toString() + b.toString()
+//     return a + b
+// }
+
+// type Osoba = {
+//     name: string
+//     prezime: string
+//     hobi: string[]
+// }
+
+// type Zaposleni = {
+//     prezime: string
+//     pozicija: string
+//     name: string
+// }
+
+// type MyO = Osoba | Zaposleni
+
+// function printHobby(object:MyO) {
+//     if('hobi' in object)
+//         console.log(object.hobi)
+// }
+
+// DISCRIMINATING TYPES
+// interface Kosarka {
+//     type: 'Kosarka'
+//     koraci: boolean
+// }
+
+// interface Fudbal {
+//     type: 'Fudbal'
+//     ofsajd: boolean
+// }
+
+// let greska: boolean
+// let obj3: Kosarka | Fudbal
+
+// switch (obj3.type) {
+//     case 'Fudbal':
+//         greska = obj3.ofsajd
+//         break;
+//     default:
+//         break;
+// }
+
+// console.log(greska);
+
+// TYPE CASTING
+// const divIspis1 = document.querySelector('div')! as HTMLDivElement
+// const inputUser = document.querySelector('input')! as HTMLInputElement
+// divIspis1.textContent = 'pozdrav'
+
+// divIspis1.value  
+// inputUser.value
+
+// INDEXING (index properties)
+
+// interface Error {   // {email: 'str', user: 'str', ...}
+//     [key: string | number]: string
+// }
+
+// interface MojI extends Error  {
+//     email: 'moj mail',
+//     1: 'moj broj'
+// }
+
+// -NULL COALESCING (&& ||) ??
+// || gleda falsey value, null i undefined
+// ?? gleda samo null i undefined
+
+// const str = null
+// let mojStr = str ?? 'DEFAULT'
+
+// OPTIONAL CHAINING ?
+// obj?.hobby?.sport[0]
+// function add(a: number, b?:number) {
+    
+// }
+
+// FUNCTION OVERLOADS
+
+// function add(a: string, b: number): string;
+// function add(a: number, b: number): number;
+// function add(a: number | string, b: number | string) {
+//     if(typeof a === 'string' || typeof b === 'string')
+//         return a.toString() + b.toString()
+//     return a + b
+// }
 
 
