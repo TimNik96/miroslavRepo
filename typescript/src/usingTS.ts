@@ -253,4 +253,142 @@
 //     return a + b
 // }
 
+// class Automobil {
 
+//     constructor(num: number) {
+//         this.number = num
+//     }
+// }
+
+// let obj = {
+//     name: "marko",
+
+//     pozdrav() {
+//         console.log('Pozdrav,' + this.name);
+//     }
+// }
+
+// class
+//     -polja(private, public, protected)
+//     -readonly polja
+//     -shorthand syntax
+//     -singlton design pattern(OOP design patterns)
+//     -apstraktne klase i metode
+//     -override
+//     -nasledjivanje
+//     -implementacija interfejsa
+//     -static
+// import
+//     -es6 imports
+//     -namespace
+// generics
+//     -ugradjeni generics
+//         -Array 
+//         -Promise
+//     -constrains 
+//         -keyof
+interface MojAutomobil {
+    // make: string
+    // productionYear: number
+
+    // ocistiMe(): void
+}
+
+abstract class Automobil implements MojAutomobil{
+    protected make: string
+    private productionYear: number
+
+    constructor(make: string, productionYear: number) {
+        // super()  -  poziva konstruktor nasledje klase
+        this.make = make
+        this.productionYear = productionYear
+    }
+
+    get myMake() {
+        return this.make
+    }
+
+    set myMake(newMake: string) {
+        this.make = newMake
+    }
+
+    ocistiMe(): void {
+        console.log("Hvala ti!")
+    }
+
+    abstract drive(this: Automobil): void
+}
+
+class SportsCar extends Automobil{
+    // private readonly tipGoriva: string
+    static brojSasije: number
+
+    constructor(private readonly tipGoriva: string) {
+        super('lambo', 2022)
+        this.tipGoriva = tipGoriva
+    }
+
+    drive(this: SportsCar) {
+        console.log('Sad vozim ' + this.make)
+    }
+
+    static drift() {
+        console.log('Spaljivanje guma!!')
+    }
+}
+
+// let a1 = new Automobil('mazda', 2019)
+// let a2 = new SportsCar('benzin')
+SportsCar.brojSasije
+SportsCar.drift()
+
+// let prom = a1.myMake
+
+// let a2 = {make: 'vw', productionYear: 2020, drive()}
+
+// import {sth} from './app.js'
+// import * as Sth from './sth.js'
+
+// import biloKojiObj
+
+// Sth.add()
+
+/// <reference />
+// namespace MojSpace {
+//     export interface MojI {
+//         name: string
+//     }
+// }
+
+// namespace MojSpace {
+//     class 
+// }
+
+// let niz1: string[]
+
+// let niz1: Array<string>
+
+// let promise = new Promise<string>((resolve: object, reject: object) => {
+    
+// })
+
+// promise.then((data) => {
+//     console.log(data)
+// })
+
+function kreirajObjekat<T extends object | number | string>(objekat1: T, objekat2: T) {
+    return Object.assign(objekat1, objekat2)
+}
+
+let object1 = kreirajObjekat({name: 'Marko'}, {age: 30})
+object1.name
+
+function returnKey<T extends object, U extends keyof object>(object: T, key: U) {
+    return object[key]
+}
+
+let myObject = {
+    name: 'Marko'
+}
+
+console.log(myObject.name);

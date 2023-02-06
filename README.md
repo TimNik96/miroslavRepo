@@ -244,3 +244,8 @@ hovered. Na klik dugmeta izmeniti boju pozadine elementa sa klasom my-cnt na ora
 #|Domaci_8
 
 http://itoiptestapp.x10.mx/
+
+TYPESCRIPT suggestions
+    -decorators
+    -ts with webpack
+    -ts in react
